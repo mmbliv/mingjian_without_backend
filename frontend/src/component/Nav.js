@@ -16,7 +16,7 @@ export const Nav = () => {
         <ul className="hidden sm:flex justify-end items-center h-full gap-2">
           <NavData />
           <Link to="/blogs">
-            <li className="uppercase hover:text-Hightlight pl-3 btn">bolg</li>
+            <li className="uppercase hover:text-Hightlight pl-3 btn">blog</li>
           </Link>
           <AnchorLink to="/#news">
             <li className="uppercase hover:text-Hightlight mr-7 btn">news</li>

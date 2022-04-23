@@ -54,10 +54,7 @@ module.exports = {
       options: {
         fonts: {
           google: [
-            {
-              family: "Roboto",
-              variants: ["400", "700"],
-            },
+            { family: "Roboto", variants: ["400", "700"] },
             { family: "Open Sans", variants: ["400", "700"] },
             { family: "Oswald", variants: ["200", "400"] },
           ],
