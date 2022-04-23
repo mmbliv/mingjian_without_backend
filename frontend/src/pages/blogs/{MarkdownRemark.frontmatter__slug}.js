@@ -18,7 +18,7 @@ const BlogTemplate = ({ data }) => {
           <ul>
             {frontmatter.stack.map((i, index) => {
               return (
-                <li key={index} className="btn mr-2">
+                <li key={index} className="stack mr-2">
                   {i}
                 </li>
               )

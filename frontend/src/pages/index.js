@@ -24,7 +24,7 @@ const Home = ({ data }) => {
         <New news={news} />
       </div>
       <PeopleCards people={pi} />
-      <PeopleCards people={people} title="GRADUATE" />
+      <PeopleCards people={people} title="GRADUATE STUDENTS" />
       <Research researches={researches} showLink />
       <Code codes={codes} showLink />
     </Layout>
