@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_code_content_codes",
+  "info": {
+    "name": "code",
+    "icon": "align-center"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "githublink": {
+      "type": "string"
+    },
+    "documentlink": {
+      "type": "string"
+    }
+  }
+}

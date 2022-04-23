@@ -1,0 +1,14 @@
+{
+  "collectionName": "components_decription_stocks",
+  "info": {
+    "name": "stock",
+    "icon": "arrow-right"
+  },
+  "options": {},
+  "attributes": {
+    "stock_item": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

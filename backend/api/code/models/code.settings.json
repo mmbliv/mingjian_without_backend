@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "codes",
+  "info": {
+    "name": "code",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "content": {
+      "type": "richtext",
+      "required": true
+    },
+    "github": {
+      "type": "string"
+    },
+    "document": {
+      "type": "string"
+    }
+  }
+}

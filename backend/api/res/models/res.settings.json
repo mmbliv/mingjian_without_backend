@@ -1,0 +1,39 @@
+{
+  "kind": "collectionType",
+  "collectionName": "res",
+  "info": {
+    "name": "Res",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "descrip": {
+      "type": "richtext",
+      "required": true
+    },
+    "img": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "files",
+        "images",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": true,
+      "pluginOptions": {}
+    },
+    "featured": {
+      "type": "boolean"
+    }
+  }
+}

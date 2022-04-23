@@ -1,0 +1,28 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/pi",
+      "handler": "pi.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/pi",
+      "handler": "pi.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/pi",
+      "handler": "pi.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}
