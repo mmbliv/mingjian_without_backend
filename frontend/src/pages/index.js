@@ -23,7 +23,7 @@ const Home = ({ data }) => {
         <Aboutme />
         <New news={news} />
       </div>
-      <PeopleCards people={pi} title="PI" />
+      <PeopleCards people={pi} />
       <PeopleCards people={people} title="GRADUATE" />
       <Research researches={researches} showLink />
       <Code codes={codes} showLink />
