@@ -46,7 +46,7 @@ export const Research = ({ researches, showLink }) => {
               <p className="subTitle">{item.title}</p>
               <hr />
               {showLink ? (
-                <p>{item.descrip.split(0, 200)}...</p>
+                <p>{item.descrip.substring(0, 200).concat("...")}</p>
               ) : (
                 <p>{item.descrip}</p>
               )}

@@ -5,7 +5,7 @@ import { SubtitleIcon } from "./SubtitleIcon"
 import { SubtitleIconSvg } from "./SubtitleIconSvg"
 const query = graphql`
   {
-    file(name: { eq: "about" }) {
+    file(name: { eq: "people" }) {
       childrenImageSharp {
         gatsbyImageData
       }
