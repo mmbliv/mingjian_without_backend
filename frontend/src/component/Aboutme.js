@@ -10,13 +10,6 @@ const query = graphql`
         about
       }
     }
-    file(name: { eq: "about" }) {
-      childrenImageSharp {
-        gatsbyImageData
-      }
-      extension
-      publicURL
-    }
   }
 `
 
@@ -31,13 +24,7 @@ export const Aboutme = () => {
       {/* this is the about me div */}
       <div>
         <h2 className="text-center">ABOUT</h2>
-        <div className="flex flex-row justify-center mb-10">
-          {data.file.childrenImageSharp === [] ? (
-            <SubtitleIcon icon={data.file.childrenImageSharp} />
-          ) : (
-            <SubtitleIconSvg icon={data.file.publicURL} />
-          )}
-        </div>
+        <div className="flex flex-row justify-center mb-10"></div>
         <p>{about[0].about}</p>
       </div>
       {/* this is the publication div */}

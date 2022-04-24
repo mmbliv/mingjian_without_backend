@@ -11,14 +11,14 @@ const PeopleCard = ({ people }) => {
       <>
         <div className="flex flex-col">
           <div className="flex flex-col sm:flex-row">
-            <div className="mx-auto sm:mx-0 pb-2 sm:pb-0">
+            <div className="sm:mx-0 pb-2 sm:pb-0 text-center pl-5">
               <GatsbyImage
                 image={photo.localFile.childImageSharp.gatsbyImageData}
                 alt={name}
                 className="h-24 w-24 rounded-full ring-2 ring-white mr-6"
               />
             </div>
-            <div className="sm:pb-5 text-sm self-center">
+            <div className="text-sm self-center text-center sm:text-left">
               <p>{name}</p>
               <p>{email}</p>
               <p>{website}</p>
