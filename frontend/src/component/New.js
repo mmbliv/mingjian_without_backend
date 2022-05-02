@@ -1,6 +1,7 @@
 import React from "react"
 import { AnchorLink } from "gatsby-plugin-anchor-links"
 import { GatsbyImage } from "gatsby-plugin-image"
+import { Link } from "gatsby"
 
 export const New = ({ news, showGrid }) => {
   return (
@@ -13,7 +14,9 @@ export const New = ({ news, showGrid }) => {
       }`}
     >
       <div className="w-20 h-20 mx-auto mb-4">
-        <img src="icon/News.svg" alt="" />
+        <Link to="/News">
+          <img src="icon/News.svg" alt="news" />
+        </Link>
         <hr />
       </div>
       <div className={`${!showGrid && "overflow-scroll h-128 p-4"}`}>
