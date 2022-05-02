@@ -7,12 +7,13 @@ import { Research } from "../component/Research"
 import { graphql } from "gatsby"
 import PeopleCards from "../component/PeopleCards"
 import SEO from "../component/SEO"
+
 const Home = ({ data }) => {
   const {
     allStrapiCodes: { nodes: codes },
     allStrapiRes: { nodes: researches },
     allStrapiNews: { nodes: news },
-    allStrapiGraduates: { nodes: people },
+    allStrapiGraduates: { nodes: graduates },
     allStrapiPi: { nodes: pi },
   } = data
 
@@ -23,8 +24,7 @@ const Home = ({ data }) => {
         <Aboutme />
         <New news={news} />
       </div>
-      <PeopleCards people={pi} />
-      <PeopleCards people={people} title="GRADUATE STUDENTS" />
+      <PeopleCards graduates={graduates} pi={pi} />
       <Research researches={researches} showLink />
       <Code codes={codes} showLink />
     </Layout>
@@ -54,6 +54,7 @@ export const query = graphql`
         email
         description
         id
+        title
       }
     }
     allStrapiGraduates {

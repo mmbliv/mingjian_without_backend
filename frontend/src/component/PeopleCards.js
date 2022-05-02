@@ -15,31 +15,43 @@ const query = graphql`
   }
 `
 
-const PeopleCards = ({ people, title }) => {
+const PeopleCards = ({ graduates, pi }) => {
+  console.log(pi)
+  console.log(graduates)
   const data = useStaticQuery(query)
   return (
     <div id="people">
-      {!title && (
-        <>
-          <h2 className="text-center pt-16">PEOPLE</h2>
-          <div className="flex flex-row justify-center">
-            {data.file.childrenImageSharp === [] ? (
-              <SubtitleIcon icon={data.file.childrenImageSharp} />
-            ) : (
-              <SubtitleIconSvg icon={data.file.publicURL} />
-            )}
-          </div>
-        </>
-      )}
-      <h2 className="text-center pb-5 people-title">{title}</h2>
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-10 p-11">
-        {people.map(p => {
-          return (
-            <div key={p.id}>
-              <PeopleCard people={p} />
-            </div>
-          )
-        })}
+      <>
+        <h2 className="text-center pt-16">PEOPLE</h2>
+        <div className="flex flex-row justify-center pb-6 mb-10">
+          {data.file.childrenImageSharp === [] ? (
+            <SubtitleIcon icon={data.file.childrenImageSharp} />
+          ) : (
+            <SubtitleIconSvg icon={data.file.publicURL} />
+          )}
+        </div>
+      </>
+      <div>
+        <h2 className="text-center sm:text-left people-title uppercase sm:pl-11">
+          principal investigator
+        </h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-10 p-11 pt-5">
+          <PeopleCard people={pi[0]} />
+        </div>
+      </div>
+      <div>
+        <h2 className="text-center sm:text-left people-title uppercase sm:pl-11 ">
+          graducate
+        </h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-10 p-11 pt-5">
+          {graduates.map(graduate => {
+            return (
+              <div key={graduate.id}>
+                <PeopleCard people={graduate} />
+              </div>
+            )
+          })}
+        </div>
       </div>
     </div>
   )
