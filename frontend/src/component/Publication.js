@@ -19,7 +19,7 @@ export const Publication = () => {
 
   return (
     <div className="pt-24" id="publication">
-      <h2 className="text-center">PUBLICATION</h2>
+      <h2 className="text-center">PUBLICATIONS</h2>
       <div className="flex flex-row justify-center mb-10">
         {data.file.childrenImageSharp === [] ? (
           <SubtitleIcon icon={data.file.childrenImageSharp} />
