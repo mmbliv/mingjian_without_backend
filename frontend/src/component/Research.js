@@ -23,7 +23,11 @@ export const Research = ({ researches, showLink }) => {
   return (
     <article
       id="research"
-      className="px-14 sm:w-4/5 mx-auto sm:pt-20 max-w-5xl"
+      className={`${
+        showLink
+          ? "px-14 sm:w-4/5 mx-auto sm:pt-20 max-w-5xl"
+          : "px-14 sm:w-4/5 mx-auto max-w-5xl"
+      }`}
     >
       <h2 className="text-center">
         {showLink ? <Link to="Researches">RESEARCH</Link> : "RESEARCH"}
