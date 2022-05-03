@@ -17,9 +17,9 @@ const PeopleCard = ({ people }) => {
               className="h-28 w-28 rounded-full ring-2 ring-white sm:mr-4 "
             />
           </div>
-          <div className="text-sm self-center text-center sm:text-left w-max">
+          <div className="text-sm self-center text-center sm:text-left">
             <p className="text-lg font-extrabold">{name}</p>
-            <p>{title}</p>
+            <p className="w-max">{title}</p>
             <p className="text-slate-900">{email}</p>
             <p>{website}</p>
           </div>

@@ -2,6 +2,7 @@ import React from "react"
 import { AnchorLink } from "gatsby-plugin-anchor-links"
 import { GatsbyImage } from "gatsby-plugin-image"
 import { Link } from "gatsby"
+import ReactMarkdown from "react-markdown"
 
 export const New = ({ news, showGrid }) => {
   return (
@@ -28,7 +29,8 @@ export const New = ({ news, showGrid }) => {
                   <div className="flex flex-row">
                     <p className="subTitle text-sm">{item.date}</p>
                   </div>
-                  <p>{item.content}</p>
+                  {/* <p>{item.content}</p> */}
+                  <ReactMarkdown children={item.content} />
                   {/* {item.img && (
                     <GatsbyImage
                       image={item.img.localFile.childImageSharp.gatsbyImageData}
