@@ -7,7 +7,7 @@ const BlogTemplate = ({ data }) => {
   const {
     allMarkdownRemark: { nodes },
   } = data
-  const { html, id, frontmatter } = nodes[0]
+  const { html, frontmatter } = nodes[0]
 
   return (
     <Layout>

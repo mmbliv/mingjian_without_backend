@@ -173,6 +173,7 @@
   padding-bottom: 0.3em;
   font-size: 2em;
   border-bottom: 1px solid var(--color-border-muted);
+  color: rgb(68, 72, 76);
 }
 
 .markdown-body mark {
@@ -359,21 +360,25 @@
   padding-bottom: 0.3em;
   font-size: 1.5em;
   border-bottom: 1px solid var(--color-border-muted);
+  color: rgb(68, 72, 76);
 }
 
 .markdown-body h3 {
   font-weight: 600;
   font-size: 1.25em;
+  color: rgb(68, 72, 76);
 }
 
 .markdown-body h4 {
   font-weight: 600;
   font-size: 1em;
+  color: rgb(68, 72, 76);
 }
 
 .markdown-body h5 {
   font-weight: 600;
   font-size: 0.875em;
+  color: rgb(68, 72, 76);
 }
 
 .markdown-body h6 {

@@ -54,7 +54,7 @@ export const Research = ({ researches, showLink }) => {
               <GatsbyImage
                 image={item.img.localFile.childImageSharp.gatsbyImageData}
                 alt={item.title}
-                className="w-96 mx-auto block"
+                className="w-96 mx-auto block mt-5"
               />
             </AnchorLink>
           )

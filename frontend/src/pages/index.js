@@ -6,7 +6,7 @@ import { Aboutme } from "../component/Aboutme"
 import { Research } from "../component/Research"
 import { graphql } from "gatsby"
 import PeopleCards from "../component/PeopleCards"
-import SEO from "../component/SEO"
+import Seo from "../component/Seo"
 
 const Home = ({ data }) => {
   const {
@@ -19,7 +19,7 @@ const Home = ({ data }) => {
 
   return (
     <Layout>
-      <SEO />
+      <Seo />
       <div className="grid sm:grid-cols-3 gap-10 justify-center sm:mb-11 pb-14 px-8">
         <Aboutme />
         <New news={news} />

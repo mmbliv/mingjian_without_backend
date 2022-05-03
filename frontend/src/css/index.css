@@ -93,4 +93,7 @@
     padding-left: 0.75em;
     border-left: 0.25em solid #f99;
   }
+  .mk img {
+    padding-top: 1rem;
+  }
 }

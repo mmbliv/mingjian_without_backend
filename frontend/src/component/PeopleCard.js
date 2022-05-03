@@ -1,6 +1,5 @@
 import React from "react"
 import { GatsbyImage } from "gatsby-plugin-image"
-import PeopleCards from "./PeopleCards"
 
 const PeopleCard = ({ people }) => {
   const { description, email, name, website, photo, title } = people

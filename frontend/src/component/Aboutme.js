@@ -1,8 +1,6 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
-import { SubtitleIcon } from "./SubtitleIcon"
 import { Publication } from "./Publication"
-import { SubtitleIconSvg } from "./SubtitleIconSvg"
 const query = graphql`
   {
     allStrapiAbout {

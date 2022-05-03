@@ -1,6 +1,5 @@
 import React from "react"
 import { AnchorLink } from "gatsby-plugin-anchor-links"
-import { GatsbyImage } from "gatsby-plugin-image"
 import { Link } from "gatsby"
 import ReactMarkdown from "react-markdown"
 
@@ -30,7 +29,9 @@ export const New = ({ news, showGrid }) => {
                     <p className="subTitle text-sm">{item.date}</p>
                   </div>
                   {/* <p>{item.content}</p> */}
-                  <ReactMarkdown children={item.content} />
+                  <div className="mk">
+                    <ReactMarkdown children={item.content} />
+                  </div>
                   {/* {item.img && (
                     <GatsbyImage
                       image={item.img.localFile.childImageSharp.gatsbyImageData}
