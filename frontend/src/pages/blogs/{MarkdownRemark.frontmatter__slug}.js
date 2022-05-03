@@ -11,10 +11,11 @@ const BlogTemplate = ({ data }) => {
 
   return (
     <Layout>
-      <div className="w-full">
+      <div className="w-full mb-16">
         <div className="flex flex-col mx-auto gap-3 max-w-4xl">
-          <h2 className="text-center">{frontmatter.title}</h2>
+          <h2 className="text-center text-5xl">{frontmatter.title}</h2>
           <h1 className="text-right">{frontmatter.date}</h1>
+          <hr />
           <ul>
             {frontmatter.stack.map((i, index) => {
               return (
