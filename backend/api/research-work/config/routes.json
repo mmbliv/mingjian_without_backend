@@ -2,48 +2,48 @@
   "routes": [
     {
       "method": "GET",
-      "path": "/res",
-      "handler": "res.find",
+      "path": "/research-works",
+      "handler": "research-work.find",
       "config": {
         "policies": []
       }
     },
     {
       "method": "GET",
-      "path": "/res/count",
-      "handler": "res.count",
+      "path": "/research-works/count",
+      "handler": "research-work.count",
       "config": {
         "policies": []
       }
     },
     {
       "method": "GET",
-      "path": "/res/:id",
-      "handler": "res.findOne",
+      "path": "/research-works/:id",
+      "handler": "research-work.findOne",
       "config": {
         "policies": []
       }
     },
     {
       "method": "POST",
-      "path": "/res",
-      "handler": "res.create",
+      "path": "/research-works",
+      "handler": "research-work.create",
       "config": {
         "policies": []
       }
     },
     {
       "method": "PUT",
-      "path": "/res/:id",
-      "handler": "res.update",
+      "path": "/research-works/:id",
+      "handler": "research-work.update",
       "config": {
         "policies": []
       }
     },
     {
       "method": "DELETE",
-      "path": "/res/:id",
-      "handler": "res.delete",
+      "path": "/research-works/:id",
+      "handler": "research-work.delete",
       "config": {
         "policies": []
       }

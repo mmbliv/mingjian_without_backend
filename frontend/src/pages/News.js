@@ -22,13 +22,13 @@ export const query = graphql`
         id
         title
         date(formatString: "MMMM Do, YYYY")
-        img {
-          localFile {
-            childImageSharp {
-              gatsbyImageData
-            }
-          }
-        }
+        # img {
+        #   localFile {
+        #     childImageSharp {
+        #       gatsbyImageData
+        #     }
+        #   }
+        # }
       }
     }
   }

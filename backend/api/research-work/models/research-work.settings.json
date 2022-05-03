@@ -1,8 +1,8 @@
 {
   "kind": "collectionType",
-  "collectionName": "res",
+  "collectionName": "research",
   "info": {
-    "name": "Res",
+    "name": "Research_work",
     "description": ""
   },
   "options": {
@@ -16,7 +16,7 @@
       "type": "string",
       "required": true
     },
-    "descrip": {
+    "content": {
       "type": "richtext",
       "required": true
     },
@@ -32,7 +32,11 @@
       "required": true,
       "pluginOptions": {}
     },
-    "featured": {
+    "order": {
+      "required": true,
+      "type": "integer"
+    },
+    "show_it": {
       "type": "boolean"
     }
   }

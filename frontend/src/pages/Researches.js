@@ -5,7 +5,7 @@ import { Research } from "../component/Research"
 
 const Researches = ({ data }) => {
   const {
-    allStrapiRes: { nodes: researches },
+    allStrapiResearchWorks: { nodes: researches },
   } = data
 
   return (
@@ -16,11 +16,14 @@ const Researches = ({ data }) => {
 }
 export const query = graphql`
   {
-    allStrapiRes(sort: { fields: id, order: DESC }) {
+    allStrapiResearchWorks(
+      filter: { show_it: { eq: true } }
+      sort: { fields: order, order: ASC }
+    ) {
       nodes {
         id
         title
-        descrip
+        content
         img {
           localFile {
             childImageSharp {

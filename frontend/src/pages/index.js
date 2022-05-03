@@ -11,7 +11,7 @@ import SEO from "../component/SEO"
 const Home = ({ data }) => {
   const {
     allStrapiCodes: { nodes: codes },
-    allStrapiRes: { nodes: researches },
+    allStrapiResearchWorks: { nodes: researches },
     allStrapiNews: { nodes: news },
     allStrapiGraduates: { nodes: graduates },
     allStrapiPi: { nodes: pi },
@@ -32,7 +32,11 @@ const Home = ({ data }) => {
 }
 export const query = graphql`
   {
-    allStrapiCodes(limit: 3, sort: { fields: id, order: DESC }) {
+    allStrapiCodes(
+      limit: 3
+      sort: { fields: order, order: ASC }
+      filter: { show_it: { eq: true } }
+    ) {
       nodes {
         content
         github
@@ -57,7 +61,10 @@ export const query = graphql`
         title
       }
     }
-    allStrapiGraduates {
+    allStrapiGraduates(
+      sort: { fields: order, order: ASC }
+      filter: { show_it: { eq: true } }
+    ) {
       nodes {
         description
         email
@@ -79,20 +86,24 @@ export const query = graphql`
         id
         title
         date(formatString: "MMMM Do, YYYY")
-        img {
-          localFile {
-            childImageSharp {
-              gatsbyImageData
-            }
-          }
-        }
+        # img {
+        #   localFile {
+        #     childImageSharp {
+        #       gatsbyImageData
+        #     }
+        #   }
+        # }
       }
     }
-    allStrapiRes(limit: 4, sort: { fields: id, order: DESC }) {
+    allStrapiResearchWorks(
+      limit: 4
+      filter: { show_it: { eq: true } }
+      sort: { fields: order, order: ASC }
+    ) {
       nodes {
         id
         title
-        descrip
+        content
         img {
           localFile {
             childImageSharp {

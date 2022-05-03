@@ -25,6 +25,13 @@
     },
     "document": {
       "type": "string"
+    },
+    "show_it": {
+      "type": "boolean"
+    },
+    "order": {
+      "type": "integer",
+      "required": true
     }
   }
 }

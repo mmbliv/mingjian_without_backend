@@ -29,13 +29,13 @@ export const New = ({ news, showGrid }) => {
                     <p className="subTitle text-sm">{item.date}</p>
                   </div>
                   <p>{item.content}</p>
-                  {item.img && (
+                  {/* {item.img && (
                     <GatsbyImage
                       image={item.img.localFile.childImageSharp.gatsbyImageData}
                       alt={item.title}
                       className="mx-auto block h-80"
                     />
-                  )}
+                  )} */}
                   <hr />
                 </li>
               </ul>

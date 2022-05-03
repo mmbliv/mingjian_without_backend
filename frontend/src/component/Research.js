@@ -46,9 +46,9 @@ export const Research = ({ researches, showLink }) => {
               <p className="subTitle">{item.title}</p>
               <hr />
               {showLink ? (
-                <p>{item.descrip.substring(0, 200).concat("...")}</p>
+                <p>{item.content.substring(0, 200).concat("...")}</p>
               ) : (
-                <p>{item.descrip}</p>
+                <p>{item.content}</p>
               )}
 
               <GatsbyImage
