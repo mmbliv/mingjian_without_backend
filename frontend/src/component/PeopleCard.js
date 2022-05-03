@@ -20,7 +20,7 @@ const PeopleCard = ({ people }) => {
           <div className="text-sm self-center text-center sm:text-left w-max">
             <p className="text-lg font-extrabold">{name}</p>
             <p>{title}</p>
-            <p>{email}</p>
+            <p className="text-slate-900">{email}</p>
             <p>{website}</p>
           </div>
         </div>

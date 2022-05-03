@@ -32,16 +32,16 @@ const PeopleCards = ({ graduates, pi }) => {
         </div>
       </>
       <div>
-        <h2 className="text-center sm:text-left people-title uppercase sm:pl-11">
-          principal investigator
+        <h2 className="text-center sm:text-left people-title sm:pl-11">
+          Principal Investigator
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-10 p-11 pt-5">
           <PeopleCard people={pi[0]} />
         </div>
       </div>
       <div>
-        <h2 className="text-center sm:text-left people-title uppercase sm:pl-11 ">
-          graducate
+        <h2 className="text-center sm:text-left people-title sm:pl-11 ">
+          Graduate Students
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-10 p-11 pt-5">
           {graduates.map(graduate => {
