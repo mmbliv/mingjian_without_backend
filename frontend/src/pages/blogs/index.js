@@ -30,7 +30,7 @@ const Blogs = ({ data }) => {
 }
 export const query = graphql`
   {
-    allMarkdownRemark {
+    allMarkdownRemark(sort: { order: DESC, fields: frontmatter___date }) {
       nodes {
         html
         id

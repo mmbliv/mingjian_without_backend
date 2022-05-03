@@ -2,7 +2,8 @@
   "kind": "singleType",
   "collectionName": "pis",
   "info": {
-    "name": "PI"
+    "name": "PI",
+    "description": ""
   },
   "options": {
     "increments": true,
@@ -34,6 +35,9 @@
     "description": {
       "type": "richtext",
       "required": true
+    },
+    "title": {
+      "type": "string"
     }
   }
 }

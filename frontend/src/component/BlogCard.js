@@ -13,7 +13,7 @@ function randomColor() {
 const BlogCard = ({ blog }) => {
   return (
     <Link to={`/blogs/${blog.frontmatter.slug}`}>
-      <Card style={{ backgroundColor: "rgb(203 213 225)" }}>
+      <Card style={{ backgroundColor: "rgb(241 245 249)" }}>
         <CardHeader
           avatar={
             <Avatar
