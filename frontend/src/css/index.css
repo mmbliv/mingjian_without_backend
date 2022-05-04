@@ -27,16 +27,19 @@
   .people-title {
     color: #d89c60;
     font-size: 1.2em;
+    letter-spacing: 0.05rem;
   }
   .subTitle {
     color: #d89c60;
     font-size: 1.3em;
     text-indent: 0;
-    font-family: "Oswald", sans-serif;
+    /* font-family: "Oswald", sans-serif; */
     font-weight: 400;
   }
   .footer {
     font-family: "Source Sans Pro", sans-serif;
+    font-weight: 200;
+    font-size: 0.9em;
   }
   .btn {
     text-transform: uppercase;
@@ -101,6 +104,11 @@
     height: 200px;
     object-fit: cover;
     margin: 0 auto;
+  }
+  .mk p {
+    font-family: "Source Sans Pro", sans-serif;
+    font-size: 1em;
+    /* font-weight: 300; */
   }
   .icon {
     background-color: transparent;
