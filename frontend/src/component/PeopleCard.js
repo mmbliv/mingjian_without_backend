@@ -16,9 +16,9 @@ const PeopleCard = ({ people }) => {
             />
           </div>
           <div className="text-sm self-center text-center sm:text-left">
-            <p className="text-lg font-extrabold">{name}</p>
+            <p className="text-lg font-semibold">{name}</p>
             <p className="w-max">{title}</p>
-            <p className="text-slate-900">{email}</p>
+            <p className="text-slate-800">{email}</p>
             <p>{website}</p>
           </div>
         </div>

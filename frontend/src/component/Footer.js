@@ -3,23 +3,29 @@ import { FaGithubSquare } from "react-icons/fa"
 
 export const Footer = () => {
   return (
-    <div className="h-32 w-full bg-gray-200 footer">
-      <div className="text-center sm:text-left flex flex-col sm:flex-row justify-between items-center max-w-5xl mx-auto h-full">
+    <div className="h-32 w-ful footer bg-gray-200">
+      <div className="flex flex-col text-center sm:text-left sm:flex-row w-full justify-between items-center max-w-5xl mx-auto h-full ">
         <div>
-          {/* <p className="font-light">Contact</p> */}
+          <p className="font-light">Contact</p>
           <p>4226 Martin Luther King Boulevard </p>
           <p>Houston, TX 77204, USA</p>
           <p>mjwen@uh.edu</p>
         </div>
         <div>
-          <p>Website designed by:</p>
-          <a
-            href="https://github.com/mmbliv"
-            className="flex items-center hover:underline hover:text-Button w-full justify-center sm:justify-start"
-          >
-            <FaGithubSquare />
-            <p className=" pl-2">mmbliv</p>
-          </a>
+          <p>
+            &copy;&nbsp;{new Date().getFullYear()}
+            <span>&nbsp;Mingjian Wen </span>
+          </p>
+          <div className="flex flex-row gap-2">
+            <p>Designed by</p>
+            <a
+              href="https://github.com/mmbliv"
+              className="flex items-center hover:underline hover:text-Button"
+            >
+              <FaGithubSquare />
+              <p className=" pl-2">mmbliv</p>
+            </a>
+          </div>
         </div>
       </div>
     </div>
