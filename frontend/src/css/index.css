@@ -37,8 +37,12 @@
     font-weight: 400;
   }
   .hero-title {
+    /* font-family: Menlo; */
+    font-size: 1em;
+    color: hsl(209, 61%, 16%);
   }
   .hero-subtitle {
+    font-size: 1.2em;
   }
   .footer {
     font-family: "Source Sans Pro", sans-serif;

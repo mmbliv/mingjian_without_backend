@@ -30,9 +30,9 @@ export const Header = () => {
       <GatsbyImage
         image={hero[0].background.localFile.childImageSharp.gatsbyImageData}
         alt={hero[0].title}
-        className="object-cover w-full h-60 opacity-60 block mx-auto"
+        className="object-cover w-full h-60 opacity-50 block mx-auto"
       />
-      <div className="relative -top-40 text-center text-3xl tracking-widest font-bold text-gray-900 w-8/12 my-0 mx-auto border-black border-2 rounded-md">
+      <div className="relative -top-40 text-center text-4xl tracking-wider font-bold text-gray-900 w-8/12 my-0 mx-auto border-gray-700 border-2 p-1 rounded-md">
         <p className="uppercase hero-title">{hero[0].title}</p>
       </div>
       <div className="relative -top-36 my-0 mx-auto w-full text-center text-gray-900 ">
