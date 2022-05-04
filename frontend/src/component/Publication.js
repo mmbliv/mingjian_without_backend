@@ -22,9 +22,9 @@ export const Publication = () => {
       <h2 className="text-center">PUBLICATIONS</h2>
       <div className="flex flex-row justify-center mb-10">
         {data.file.childrenImageSharp === [] ? (
-          <SubtitleIcon icon={data.file.childrenImageSharp} />
+          <SubtitleIcon icon={data.file.childrenImageSharp} smaller />
         ) : (
-          <SubtitleIconSvg icon={data.file.publicURL} />
+          <SubtitleIconSvg icon={data.file.publicURL} smaller />
         )}
       </div>
       <div className="flex flex-col sm:flex-row gap-6 justify-center text-lg w-max mx-auto">

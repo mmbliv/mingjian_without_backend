@@ -19,8 +19,10 @@ export const Nav = () => {
             <li className="uppercase hover:text-Hightlight pl-3 btn">blog</li>
           </Link>
           {/* In the below line, should use `news` instead of `about`; hotfix to ensure jump to the top */}
-          <AnchorLink to="/#about">
-            <li className="uppercase hover:text-Hightlight mr-7 btn">news</li>
+          <AnchorLink to="/#position">
+            <li className="uppercase hover:text-Hightlight mr-7 btn">
+              openings
+            </li>
           </AnchorLink>
         </ul>
         <button

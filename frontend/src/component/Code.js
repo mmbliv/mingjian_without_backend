@@ -23,13 +23,13 @@ export const Code = ({ codes, showLink, showGrid }) => {
   return (
     <div id="code" className="w-full pt-11 mb-20">
       <h2 className="text-center pt-8">
-        {showLink ? <Link to="Codes">CODES</Link> : "CODES"}
+        {showLink ? <Link to="Codes">CODE</Link> : "CODE"}
       </h2>
       <div className="flex flex-row justify-center pb-6 mb-10">
         {data.file.childrenImageSharp === [] ? (
-          <SubtitleIcon icon={data.file.childrenImageSharp} />
+          <SubtitleIcon icon={data.file.childrenImageSharp} smaller />
         ) : (
-          <SubtitleIconSvg icon={data.file.publicURL} />
+          <SubtitleIconSvg icon={data.file.publicURL} smaller />
         )}
       </div>
       <ul

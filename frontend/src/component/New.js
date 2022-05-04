@@ -13,7 +13,7 @@ export const New = ({ news, showGrid }) => {
           : "pt-8 h-128 border-2 rounded-xl p-4 bg-slate-100 shadow-md flex flex-col mt-16"
       }`}
     >
-      <div className="w-20 h-20 mx-auto mb-4">
+      <div className=" w-14 h-14 mx-auto mb-2">
         <Link to="/News">
           <img src="icon/News.svg" alt="news" />
         </Link>

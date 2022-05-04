@@ -96,4 +96,7 @@
   .mk img {
     padding-top: 1rem;
   }
+  .icon {
+    background-color: transparent;
+  }
 }

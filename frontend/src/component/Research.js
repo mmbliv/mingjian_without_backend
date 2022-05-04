@@ -34,9 +34,9 @@ export const Research = ({ researches, showLink }) => {
       </h2>
       <div className="flex flex-row justify-center mb-10">
         {data.file.childrenImageSharp === [] ? (
-          <SubtitleIcon icon={data.file.childrenImageSharp} />
+          <SubtitleIcon icon={data.file.childrenImageSharp} smaller />
         ) : (
-          <SubtitleIconSvg icon={data.file.publicURL} />
+          <SubtitleIconSvg icon={data.file.publicURL} smaller />
         )}
       </div>
       <ul className="grid gap-5">

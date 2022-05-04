@@ -16,18 +16,16 @@ const query = graphql`
 `
 
 const PeopleCards = ({ graduates, pi }) => {
-  console.log(pi)
-  console.log(graduates)
   const data = useStaticQuery(query)
   return (
     <div id="people">
       <>
         <h2 className="text-center pt-16">PEOPLE</h2>
-        <div className="flex flex-row justify-center pb-6 mb-10">
+        <div className="flex flex-row justify-center pb-6 mb-10 ">
           {data.file.childrenImageSharp === [] ? (
-            <SubtitleIcon icon={data.file.childrenImageSharp} />
+            <SubtitleIcon icon={data.file.childrenImageSharp} smaller />
           ) : (
-            <SubtitleIconSvg icon={data.file.publicURL} />
+            <SubtitleIconSvg icon={data.file.publicURL} smaller />
           )}
         </div>
       </>

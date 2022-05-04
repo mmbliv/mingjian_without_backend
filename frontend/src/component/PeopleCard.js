@@ -3,7 +3,6 @@ import { GatsbyImage } from "gatsby-plugin-image"
 
 const PeopleCard = ({ people }) => {
   const { description, email, name, website, photo, title } = people
-  console.log(people)
 
   return (
     <>
