@@ -110,6 +110,10 @@
     font-size: 1em;
     /* font-weight: 300; */
   }
+  .mk-page p {
+    font-family: "Open Sans", sans-serif;
+    font-size: 1em;
+  }
   .icon {
     background-color: transparent;
   }

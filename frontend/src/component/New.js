@@ -23,13 +23,13 @@ export const New = ({ news, showGrid }) => {
         {news.map(item => {
           return (
             <AnchorLink to={`/News#${item.title}`} key={item.id}>
-              <ul>
+              <ul className=" mb-5">
                 <li className="pb-8">
                   <div className="flex flex-row">
                     <p className="subTitle text-sm">{item.date}</p>
                   </div>
                   {/* <p>{item.content}</p> */}
-                  <div className="mk">
+                  <div className={`${showGrid ? "mk mk-page" : "mk"}`}>
                     <ReactMarkdown children={item.content} />
                   </div>
                   {/* {item.img && (

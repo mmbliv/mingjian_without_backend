@@ -9,7 +9,7 @@ export const Footer = () => {
           <p className="font-light">Contact</p>
           <p>4226 Martin Luther King Boulevard </p>
           <p>Houston, TX 77204, USA</p>
-          <p>mjwen@uh.edu</p>
+          <p>Email: mjwen@uh.edu</p>
         </div>
         <div>
           <p>
