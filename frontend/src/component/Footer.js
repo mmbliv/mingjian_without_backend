@@ -21,7 +21,9 @@ export const Footer = () => {
               href="https://github.com/mmbliv"
               className="flex items-center hover:underline hover:text-Button"
             >
-              <FaGithubSquare />
+              <div className=" text-gray-500">
+                <FaGithubSquare />
+              </div>
               <p className=" pl-2">mmbliv</p>
             </a>
           </div>
