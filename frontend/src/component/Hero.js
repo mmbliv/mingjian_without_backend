@@ -33,10 +33,10 @@ export const Header = () => {
         className="object-cover w-full h-60 opacity-60 block mx-auto"
       />
       <div className="relative -top-40 text-center text-3xl tracking-widest font-bold text-gray-900 w-8/12 my-0 mx-auto border-black border-2 rounded-md">
-        <p className="uppercase">{hero[0].title}</p>
+        <p className="uppercase hero-title">{hero[0].title}</p>
       </div>
       <div className="relative -top-36 my-0 mx-auto w-full text-center text-gray-900 ">
-        <p className="uppercase">{hero[0].subtitle}</p>
+        <p className="uppercase hero-subtitle">{hero[0].subtitle}</p>
       </div>
     </div>
   )
