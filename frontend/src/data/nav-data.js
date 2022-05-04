@@ -1,5 +1,6 @@
 import { AnchorLink } from "gatsby-plugin-anchor-links"
 import React from "react"
+import { Link } from "gatsby"
 
 export const navData = ["about", "publications", "people", "research", "code"]
 export const NavData = ({ side }) => {
@@ -10,9 +11,21 @@ export const NavData = ({ side }) => {
           key={index}
           className="uppercase hover:text-Hightlight border-orange-600"
         >
-          <AnchorLink to={`/#${item}`}>
-            <h1 className={`${side ? "side-nav indent-0" : "btn"}`}> {item}</h1>
-          </AnchorLink>
+          {item === "about" ? (
+            <Link to="/">
+              <h1 className={`${side ? "side-nav indent-0" : "btn"}`}>
+                {" "}
+                {item}
+              </h1>
+            </Link>
+          ) : (
+            <AnchorLink to={`/#${item}`}>
+              <h1 className={`${side ? "side-nav indent-0" : "btn"}`}>
+                {" "}
+                {item}
+              </h1>
+            </AnchorLink>
+          )}
         </li>
       ))}
     </>
