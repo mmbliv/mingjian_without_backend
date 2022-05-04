@@ -21,9 +21,9 @@ export const Position = ({ positions }) => {
       <h2 className=" text-center">OPENINGS</h2>
       <div className="flex flex-row justify-center mb-10">
         {data.file.childrenImageSharp === [] ? (
-          <SubtitleIcon icon={data.file.childrenImageSharp} smaller />
+          <SubtitleIcon icon={data.file.childrenImageSharp} />
         ) : (
-          <SubtitleIconSvg icon={data.file.publicURL} smaller />
+          <SubtitleIconSvg icon={data.file.publicURL} />
         )}
       </div>
       <ul className="sm:w-128 flex mx-auto mb-10 w-5/6 flex-col">

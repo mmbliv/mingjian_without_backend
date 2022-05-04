@@ -27,9 +27,9 @@ export const Code = ({ codes, showLink, showGrid }) => {
       </h2>
       <div className="flex flex-row justify-center pb-6 mb-10">
         {data.file.childrenImageSharp === [] ? (
-          <SubtitleIcon icon={data.file.childrenImageSharp} smaller />
+          <SubtitleIcon icon={data.file.childrenImageSharp} />
         ) : (
-          <SubtitleIconSvg icon={data.file.publicURL} smaller />
+          <SubtitleIconSvg icon={data.file.publicURL} />
         )}
       </div>
       <ul
