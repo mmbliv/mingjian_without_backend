@@ -54,12 +54,14 @@ export const Research = ({ researches, showLink }) => {
               ) : (
                 <p>{item.content}</p>
               )}
-
-              <GatsbyImage
-                image={item.img.localFile.childImageSharp.gatsbyImageData}
-                alt={item.title}
-                className="w-96 mx-auto block mt-5"
-              />
+              <div className=" text-center">
+                <GatsbyImage
+                  image={item.img.localFile.childImageSharp.gatsbyImageData}
+                  alt={item.title}
+                  className="mt-5"
+                  // width={500}
+                />
+              </div>
             </AnchorLink>
           )
         })}

@@ -3,7 +3,7 @@ import { FaGithubSquare } from "react-icons/fa"
 
 export const Footer = () => {
   return (
-    <div className="h-32 w-full bg-gray-200 ">
+    <div className="h-32 w-full bg-gray-200 footer">
       <div className="text-center sm:text-left flex flex-col sm:flex-row justify-between items-center max-w-5xl mx-auto h-full">
         <div>
           <p>Contact</p>
@@ -17,7 +17,7 @@ export const Footer = () => {
             className="flex items-center hover:underline hover:text-Button w-full justify-center sm:justify-start"
           >
             <FaGithubSquare />
-            <p>mmbliv</p>
+            <p className=" pl-2">mmbliv</p>
           </a>
         </div>
       </div>

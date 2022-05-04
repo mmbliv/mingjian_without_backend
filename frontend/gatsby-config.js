@@ -63,6 +63,7 @@ module.exports = {
             { family: "Roboto", variants: ["400", "700"] },
             { family: "Open Sans", variants: ["400", "700"] },
             { family: "Oswald", variants: ["200", "400"] },
+            { family: "Source Sans Pro", variants: ["300"] },
           ],
         },
       },
