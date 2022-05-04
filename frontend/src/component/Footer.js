@@ -4,7 +4,7 @@ import { FaGithubSquare } from "react-icons/fa"
 export const Footer = () => {
   return (
     <div className="h-32 w-ful footer bg-gray-200">
-      <div className="flex w-full justify-between items-center max-w-5xl mx-auto h-full ">
+      <div className="flex flex-col text-center sm:text-left sm:flex-row w-full justify-between items-center max-w-5xl mx-auto h-full ">
         <div>
           <p>Contact</p>
           <p>address</p>
