@@ -102,6 +102,10 @@
     object-fit: cover;
     margin: 0 auto;
   }
+  .mk-page p {
+    font-size: 1em;
+  }
+
   .icon {
     background-color: transparent;
   }
