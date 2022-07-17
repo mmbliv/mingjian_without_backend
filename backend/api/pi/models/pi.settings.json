@@ -38,6 +38,16 @@
     },
     "title": {
       "type": "string"
+    },
+    "CVpdf": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "files"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
     }
   }
 }

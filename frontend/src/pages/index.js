@@ -36,7 +36,7 @@ const Home = ({ data }) => {
 export const query = graphql`
   {
     allStrapiCodes(
-      limit: 3
+      # limit: 3
       sort: { fields: order, order: ASC }
       filter: { show_it: { eq: true } }
     ) {

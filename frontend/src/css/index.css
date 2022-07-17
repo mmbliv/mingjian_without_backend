@@ -125,4 +125,7 @@
   .icon {
     background-color: transparent;
   }
+  .markdown a{
+    color: blue;
+  }
 }

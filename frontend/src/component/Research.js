@@ -49,11 +49,7 @@ export const Research = ({ researches, showLink }) => {
             >
               <p className="subTitle">{item.title}</p>
               <hr />
-              {showLink ? (
-                <p>{item.content.substring(0, 200).concat("...")}</p>
-              ) : (
-                <p>{item.content}</p>
-              )}
+              {showLink ? <p>{item.content}</p> : <p>{item.content}</p>}
               <div className=" text-center">
                 <GatsbyImage
                   image={item.img.localFile.childImageSharp.gatsbyImageData}

@@ -1,6 +1,7 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import { Publication } from "./Publication"
+import ReactMarkdown from "react-markdown"
 const query = graphql`
   {
     allStrapiAbout {
@@ -23,9 +24,9 @@ export const Aboutme = () => {
       <div>
         <h2 className="text-center">ABOUT</h2>
         <div className="flex flex-row justify-center mb-10"></div>
-        <p dangerouslySetInnerHTML={{ __html: about[0].about }}>
-          {/* {about[0].about} */}
-        </p >
+        <p>
+          <ReactMarkdown children={about[0].about} className="markdown" />
+        </p>
       </div>
       {/* this is the publication div */}
       <Publication />
