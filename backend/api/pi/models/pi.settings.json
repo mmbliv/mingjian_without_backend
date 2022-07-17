@@ -38,6 +38,9 @@
     },
     "title": {
       "type": "string"
+    },
+    "cv": {
+      "type": "richtext"
     }
   }
 }

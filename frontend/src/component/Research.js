@@ -52,11 +52,17 @@ export const Research = ({ researches, showLink }) => {
               <hr />
               {showLink ? (
                 <p>
-                  <ReactMarkdown children={item.content} className="markdown" />
+                  <ReactMarkdown
+                    children={item.content}
+                    className="markdown mk"
+                  />
                 </p>
               ) : (
                 <p>
-                  <ReactMarkdown children={item.content} className="markdown" />
+                  <ReactMarkdown
+                    children={item.content}
+                    className="markdown mk"
+                  />
                 </p>
               )}
               {/* {showLink ? <p>{item.content}</p> : <p>{item.content}</p>} */}

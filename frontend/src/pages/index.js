@@ -62,6 +62,7 @@ export const query = graphql`
         description
         id
         title
+        cv
       }
     }
     allStrapiGraduates(

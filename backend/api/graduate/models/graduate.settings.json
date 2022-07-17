@@ -46,6 +46,9 @@
     "show_it": {
       "type": "boolean",
       "required": true
+    },
+    "cv": {
+      "type": "richtext"
     }
   }
 }

@@ -3,7 +3,7 @@ import { GatsbyImage } from "gatsby-plugin-image"
 import ReactMarkdown from "react-markdown"
 
 const PeopleCard = ({ people }) => {
-  const { description, email, name, website, photo, title } = people
+  const { description, email, name, website, photo, title, cv } = people
 
   return (
     <>
@@ -21,6 +21,9 @@ const PeopleCard = ({ people }) => {
             <p className="w-max">{title}</p>
             <p className="text-slate-800">{email}</p>
             <p>{website}</p>
+            <p>
+              <ReactMarkdown children={cv} className="markdown" />
+            </p>
           </div>
         </div>
         <p className="text-sm mt-5">
