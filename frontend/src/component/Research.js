@@ -54,14 +54,14 @@ export const Research = ({ researches, showLink }) => {
                 <p>
                   <ReactMarkdown
                     children={item.content}
-                    className="markdown mk"
+                    className="markdown"
                   />
                 </p>
               ) : (
                 <p>
                   <ReactMarkdown
                     children={item.content}
-                    className="markdown mk"
+                    className="markdown"
                   />
                 </p>
               )}
