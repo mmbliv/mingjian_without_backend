@@ -1,5 +1,5 @@
-NOTE, should not name this as .md file, otherwise, this will be regarded as a
-post.
+NOTE, should not name this file with .md extension; otherwise, it will be
+regarded as a post.
 
 ## Header
 - date: determines the relative order of the posts when there are multiple ones

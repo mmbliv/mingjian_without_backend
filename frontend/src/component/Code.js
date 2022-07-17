@@ -54,14 +54,14 @@ export const Code = ({ codes, showLink, showGrid }) => {
                 className="pt-2 flex items-center hover:underline hover:text-Button"
               >
                 <FaGithubSquare />
-                <p className="pl-3 ">GitHub Page</p>
+                <p className="pl-3 ">GitHub</p>
               </a>
               <a
                 href={item.document}
                 className="pt-2 flex items-center hover:underline hover:text-Button"
               >
                 <GrDocument />
-                <p className="pl-3 ">Document Page</p>
+                <p className="pl-3 ">Documentation</p>
               </a>
             </li>
           )
