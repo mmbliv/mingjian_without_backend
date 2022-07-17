@@ -5,6 +5,7 @@ import { Link } from "gatsby"
 import { SubtitleIcon } from "./SubtitleIcon"
 import { useStaticQuery, graphql } from "gatsby"
 import { SubtitleIconSvg } from "./SubtitleIconSvg"
+import ReactMarkdown from "react-markdown"
 const query = graphql`
   {
     file(name: { eq: "code" }) {
@@ -47,7 +48,10 @@ export const Code = ({ codes, showLink, showGrid }) => {
               className="border-yellow-600 border-b-4 rounded-lg p-5 bg-slate-100 shadow-xl max-w-3xl"
             >
               <p className="subTitle">{item.title}</p>
-              <p>{item.content}</p>
+              <p>
+                <ReactMarkdown children={item.content} className="markdown" />
+              </p>
+              {/* <p>{item.content}</p> */}
 
               <a
                 href={item.github}

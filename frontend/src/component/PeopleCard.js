@@ -1,5 +1,6 @@
 import React from "react"
 import { GatsbyImage } from "gatsby-plugin-image"
+import ReactMarkdown from "react-markdown"
 
 const PeopleCard = ({ people }) => {
   const { description, email, name, website, photo, title } = people
@@ -22,7 +23,10 @@ const PeopleCard = ({ people }) => {
             <p>{website}</p>
           </div>
         </div>
-        <p className="text-sm mt-5">{description}</p>
+        <p className="text-sm mt-5">
+          <ReactMarkdown children={description} className="markdown" />
+        </p>
+        {/* <p className="text-sm mt-5">{description}</p> */}
       </div>
     </>
   )

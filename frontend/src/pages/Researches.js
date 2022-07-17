@@ -24,13 +24,13 @@ export const query = graphql`
         id
         title
         content
-        img {
-          localFile {
-            childImageSharp {
-              gatsbyImageData
-            }
-          }
-        }
+        # img {
+        #   localFile {
+        #     childImageSharp {
+        #       gatsbyImageData
+        #     }
+        #   }
+        # }
       }
     }
   }

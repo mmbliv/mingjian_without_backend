@@ -1,17 +1,18 @@
 import React from "react"
-import { GatsbyImage } from "gatsby-plugin-image"
+// import { GatsbyImage } from "gatsby-plugin-image"
 import { Link } from "gatsby"
 import { AnchorLink } from "gatsby-plugin-anchor-links"
 import { SubtitleIcon } from "./SubtitleIcon"
 import { SubtitleIconSvg } from "./SubtitleIconSvg"
 import { useStaticQuery, graphql } from "gatsby"
+import ReactMarkdown from "react-markdown"
 
 const query = graphql`
   {
     file(name: { eq: "research" }) {
-      childrenImageSharp {
-        gatsbyImageData
-      }
+      # childrenImageSharp {
+      #   gatsbyImageData
+      # }
       extension
       publicURL
     }
@@ -49,15 +50,24 @@ export const Research = ({ researches, showLink }) => {
             >
               <p className="subTitle">{item.title}</p>
               <hr />
-              {showLink ? <p>{item.content}</p> : <p>{item.content}</p>}
-              <div className=" text-center">
+              {showLink ? (
+                <p>
+                  <ReactMarkdown children={item.content} className="markdown" />
+                </p>
+              ) : (
+                <p>
+                  <ReactMarkdown children={item.content} className="markdown" />
+                </p>
+              )}
+              {/* {showLink ? <p>{item.content}</p> : <p>{item.content}</p>} */}
+              {/* <div className=" text-center">
                 <GatsbyImage
                   image={item.img.localFile.childImageSharp.gatsbyImageData}
                   alt={item.title}
                   className="mt-5"
                   // width={500}
                 />
-              </div>
+              </div> */}
             </AnchorLink>
           )
         })}

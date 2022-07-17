@@ -2,6 +2,7 @@ import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import { SubtitleIcon } from "./SubtitleIcon"
 import { SubtitleIconSvg } from "./SubtitleIconSvg"
+import ReactMarkdown from "react-markdown"
 const query = graphql`
   {
     file(name: { eq: "position" }) {
@@ -33,7 +34,10 @@ export const Position = ({ positions }) => {
               <h2 className="text-center sm:text-left people-title pb-2">
                 {p.title}
               </h2>
-              <p>{p.content}</p>
+              <p>
+                <ReactMarkdown children={p.content} className="markdown" />
+              </p>
+              {/* <p>{p.content}</p> */}
             </li>
           )
         })}
