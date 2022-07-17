@@ -13,7 +13,7 @@ export const Nav = () => {
   return (
     <>
       <div className="fixed top-0 w-full bg-gray-200 h-14 z-50">
-        <ul className="hidden sm:flex justify-end items-center h-full gap-2">
+        <ul className="hidden sm:flex justify-end w-5/6 max-w-6xl items-center h-full gap-2 mx-auto pr-0">
           <NavData />
           <Link to="/blogs">
             <li className="uppercase hover:text-Hightlight pl-3 btn">blog</li>
