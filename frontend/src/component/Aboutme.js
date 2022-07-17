@@ -23,7 +23,9 @@ export const Aboutme = () => {
       <div>
         <h2 className="text-center">ABOUT</h2>
         <div className="flex flex-row justify-center mb-10"></div>
-        <p>{about[0].about}</p>
+        <p dangerouslySetInnerHTML={{ __html: about[0].about }}>
+          {/* {about[0].about} */}
+        </p >
       </div>
       {/* this is the publication div */}
       <Publication />

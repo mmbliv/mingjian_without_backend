@@ -27,20 +27,27 @@
   .people-title {
     color: #d89c60;
     font-size: 1.2em;
+    letter-spacing: 0.05rem;
   }
   .subTitle {
     color: #d89c60;
     font-size: 1.3em;
     text-indent: 0;
-    font-family: "Oswald", sans-serif;
+    /* font-family: "Oswald", sans-serif; */
     font-weight: 400;
   }
   .hero-title {
+    /* font-family: Menlo; */
+    font-size: 1em;
+    color: hsl(209, 61%, 16%);
   }
   .hero-subtitle {
+    font-size: 1.2em;
   }
   .footer {
     font-family: "Source Sans Pro", sans-serif;
+    font-weight: 200;
+    font-size: 0.9em;
   }
   .btn {
     text-transform: uppercase;
@@ -106,10 +113,15 @@
     object-fit: cover;
     margin: 0 auto;
   }
+  .mk p {
+    font-family: "Source Sans Pro", sans-serif;
+    font-size: 1em;
+    /* font-weight: 300; */
+  }
   .mk-page p {
+    font-family: "Open Sans", sans-serif;
     font-size: 1em;
   }
-
   .icon {
     background-color: transparent;
   }

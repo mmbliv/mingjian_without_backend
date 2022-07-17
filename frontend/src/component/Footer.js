@@ -6,9 +6,10 @@ export const Footer = () => {
     <div className="h-32 w-ful footer bg-gray-200">
       <div className="flex flex-col text-center sm:text-left sm:flex-row w-full justify-between items-center max-w-5xl mx-auto h-full ">
         <div>
-          <p>Contact</p>
-          <p>address</p>
-          <p>Email: mjwen@lbl.gov</p>
+          <p className="font-light">Contact</p>
+          <p>4226 Martin Luther King Boulevard S222 </p>
+          <p>Houston, TX 77204, USA</p>
+          <p>Email: mjwen@uh.edu</p>
         </div>
         <div>
           <p>

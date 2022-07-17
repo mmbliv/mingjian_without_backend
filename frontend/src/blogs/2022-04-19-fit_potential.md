@@ -1,9 +1,9 @@
 ---
-title: Fit a new potential
+title: Develop a new potential
 slug: fit-new-potential
 date: 2022-04-19
 stack: [Interatomic potentials,Fitting,Machine learning,KLIFF,LAMMPS,KIM API,OpenKIM]
-description: Steps to create a new interatomic potential model.
+description: Steps to develop a new interatomic potential model.
 ---
 
 # Create a potential
