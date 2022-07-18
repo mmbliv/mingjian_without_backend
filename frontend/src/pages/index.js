@@ -22,7 +22,7 @@ const Home = ({ data }) => {
   return (
     <Layout>
       <Seo />
-      <div className="grid sm:grid-cols-3 gap-10 justify-center sm:mb-11 pb-14 px-8">
+      <div className="grid sm:grid-cols-3 gap-10 justify-center sm:mb-11 pb-8 px-8">
         <Aboutme />
         <New news={news} />
       </div>
