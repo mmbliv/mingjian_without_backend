@@ -13,7 +13,7 @@ const PeopleCard = ({ people }) => {
             <GatsbyImage
               image={photo.localFile.childImageSharp.gatsbyImageData}
               alt={name}
-              className="h-32 w-32 rounded-full ring-2 ring-white sm:mr-4 "
+              className="h-32 w-32 headshot sm:mr-4 "
             />
           </div>
           <div className="text-sm self-center text-center sm:text-left">

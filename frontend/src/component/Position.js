@@ -27,7 +27,7 @@ export const Position = ({ positions }) => {
           <SubtitleIconSvg icon={data.file.publicURL} />
         )}
       </div>
-      <ul className="sm:w-128 flex mx-auto mb-10 w-5/6 flex-col">
+      <ul className="sm:w-128 flex mx-auto w-5/6 flex-col">
         {positions.map(p => {
           return (
             <li key={p.id} className=" mb-7">
