@@ -132,6 +132,9 @@
     margin: 0 auto;
    }
   .markdown a{
-    color: blue;
+    color: #51A0D5;
+  }
+  .markdown a:hover{
+    text-decoration: underline;
   }
 }
