@@ -37,7 +37,7 @@ export const Header = () => {
         <p className="uppercase hero-title">{hero[0].title}</p>
       </div>
       <div className="relative -top-36 my-0 mx-auto w-full text-center text-gray-900 ">
-        <p className="uppercase hero-subtitle">{hero[0].subtitle}</p>
+        <p className="hero-subtitle">{hero[0].subtitle}</p>
       </div>
     </div>
   )
