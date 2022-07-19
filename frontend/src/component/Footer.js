@@ -7,7 +7,7 @@ export const Footer = () => {
       <div className="flex flex-col text-center sm:text-left sm:flex-row w-full justify-between items-center max-w-5xl mx-auto h-full ">
         <div>
           <p className="font-light">Contact</p>
-          <p>4226 Martin Luther King Boulevard S222 </p>
+          <p>4226 Martin Luther King Boulevard S222</p>
           <p>Houston, TX 77204, USA</p>
           <p>Email: mjwen@uh.edu</p>
         </div>

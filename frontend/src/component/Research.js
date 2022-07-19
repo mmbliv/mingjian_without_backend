@@ -26,7 +26,7 @@ export const Research = ({ researches, showLink }) => {
       id="research"
       className={`${
         showLink
-          ? "px-14 sm:w-4/5 mx-auto sm:pt-20 max-w-5xl"
+          ? "px-14 sm:w-4/5 mx-auto max-w-5xl sm:pt-20"
           : "px-14 sm:w-4/5 mx-auto max-w-5xl"
       }`}
     >
@@ -48,17 +48,24 @@ export const Research = ({ researches, showLink }) => {
               key={item.id}
               className="pb-6 w-full"
             >
-              <p className="subTitle">{item.title}</p>
-              <hr />
+              <p className="subTitle pb-4">{item.title}</p>
+
               {showLink ? (
-                <p>
-                  <ReactMarkdown children={item.content} className="markdown" />
+                <p className="pb-4">
+                  <ReactMarkdown
+                    children={item.content}
+                    className="markdown"
+                  />
                 </p>
               ) : (
-                <p>
-                  <ReactMarkdown children={item.content} className="markdown" />
+                <p className="pb-4">
+                  <ReactMarkdown
+                    children={item.content}
+                    className="markdown"
+                  />
                 </p>
               )}
+              <hr/>
               {/* {showLink ? <p>{item.content}</p> : <p>{item.content}</p>} */}
               {/* <div className=" text-center">
                 <GatsbyImage
