@@ -22,9 +22,9 @@ export const Code = ({ codes, showLink, showGrid }) => {
   const data = useStaticQuery(query)
 
   return (
-    <div id="code" className="w-full pt-12 mb-32">
+    <div id="codes" className="w-full pt-12 mb-32">
       <h2 className="text-center pt-8">
-        {showLink ? <Link to="Codes">CODE</Link> : "CODE"}
+        {showLink ? <Link to="Codes">CODES</Link> : "CODES"}
       </h2>
       <div className="flex flex-row justify-center pb-6 mb-10">
         {data.file.childrenImageSharp === [] ? (
@@ -34,7 +34,6 @@ export const Code = ({ codes, showLink, showGrid }) => {
         )}
       </div>
       <ul
-        id="codes"
         className={`${
           showGrid
             ? "grid grid-cols-1 place-content-center w-full place-items-center gap-7"
