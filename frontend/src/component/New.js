@@ -25,7 +25,7 @@ export const New = ({ news, showGrid }) => {
             <AnchorLink to={`/News#${item.title}`} key={item.id}>
               <ul className=" mb-5">
                 <li className=" pb-5">
-                  <div className="flex flex-row">
+                  <div className="flex flex-row" id={item.title}>
                     <p className="subTitle text-sm">{item.date}</p>
                   </div>
                   {/* <p>{item.content}</p> */}
