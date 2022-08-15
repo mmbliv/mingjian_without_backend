@@ -21,31 +21,51 @@ export const New = ({ news, showGrid }) => {
       </div>
       <div className={`${!showGrid && "overflow-scroll h-128 p-4"}`}>
         {news.map(item => {
+          if (!showGrid) {
+            return (
+              <AnchorLink to={`/News#${item.title}`} key={item.id}>
+                <ul className=" mb-5">
+                  <li className=" pb-5">
+                    <div className="flex flex-row" id={item.title}>
+                      <p className="subTitle text-sm">{item.date}</p>
+                    </div>
+                    {/* <p>{item.content}</p> */}
+                    <div
+                      className={`${
+                        showGrid ? "mk mk-page markdown" : "mk markdown"
+                      }`}
+                    >
+                      <ReactMarkdown
+                        children={item.content}
+                        // className="markdown"
+                      />
+                    </div>
+                  </li>
+                  <hr />
+                </ul>
+              </AnchorLink>
+            )
+          }
           return (
-            <AnchorLink to={`/News#${item.title}`} key={item.id}>
-              <ul className=" mb-5">
-                <li className=" pb-5">
-                  <div className="flex flex-row" id={item.title}>
-                    <p className="subTitle text-sm">{item.date}</p>
-                  </div>
-                  {/* <p>{item.content}</p> */}
-                  <div className={`${showGrid ? "mk mk-page" : "mk"}`}>
-                    <ReactMarkdown
-                      children={item.content}
-                      className="markdown"
-                    />
-                  </div>
-                  {/* {item.img && (
-                    <GatsbyImage
-                      image={item.img.localFile.childImageSharp.gatsbyImageData}
-                      alt={item.title}
-                      className="mx-auto block h-80"
-                    />
-                  )} */}
-                </li>
-                <hr />
-              </ul>
-            </AnchorLink>
+            <ul className=" mb-5">
+              <li className=" pb-5">
+                <div className="flex flex-row" id={item.title}>
+                  <p className="subTitle text-sm">{item.date}</p>
+                </div>
+                {/* <p>{item.content}</p> */}
+                <div
+                  className={`${
+                    showGrid ? "mk mk-page markdown" : "mk markdown"
+                  }`}
+                >
+                  <ReactMarkdown
+                    children={item.content}
+                    // className="markdown"
+                  />
+                </div>
+              </li>
+              <hr />
+            </ul>
           )
         })}
       </div>
