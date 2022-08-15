@@ -48,24 +48,20 @@ export const Research = ({ researches, showLink }) => {
               key={item.id}
               className="pb-6 w-full"
             >
-              <p className="subTitle pb-4">{item.title}</p>
+              <p className="subTitle pb-4" id={item.title}>
+                {item.title}
+              </p>
 
               {showLink ? (
                 <p className="pb-4">
-                  <ReactMarkdown
-                    children={item.content}
-                    className="markdown"
-                  />
+                  <ReactMarkdown children={item.content} className="markdown" />
                 </p>
               ) : (
                 <p className="pb-4">
-                  <ReactMarkdown
-                    children={item.content}
-                    className="markdown"
-                  />
+                  <ReactMarkdown children={item.content} className="markdown" />
                 </p>
               )}
-              <hr/>
+              <hr />
               {/* {showLink ? <p>{item.content}</p> : <p>{item.content}</p>} */}
               {/* <div className=" text-center">
                 <GatsbyImage
