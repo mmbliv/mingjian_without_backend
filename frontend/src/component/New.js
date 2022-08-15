@@ -30,7 +30,10 @@ export const New = ({ news, showGrid }) => {
                   </div>
                   {/* <p>{item.content}</p> */}
                   <div className={`${showGrid ? "mk mk-page" : "mk"}`}>
-                    <ReactMarkdown children={item.content} />
+                    <ReactMarkdown
+                      children={item.content}
+                      className="markdown"
+                    />
                   </div>
                   {/* {item.img && (
                     <GatsbyImage
