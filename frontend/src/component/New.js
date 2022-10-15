@@ -2,6 +2,7 @@ import React from "react"
 import { AnchorLink } from "gatsby-plugin-anchor-links"
 import { Link } from "gatsby"
 import ReactMarkdown from "react-markdown"
+import { Manual } from "./Manual"
 
 export const New = ({ news, showGrid }) => {
   return (
@@ -10,7 +11,7 @@ export const New = ({ news, showGrid }) => {
       className={`${
         showGrid
           ? "w-2/3 mx-auto max-w-3xl"
-          : "pt-8 h-128 border-2 rounded-xl p-4 bg-slate-100 shadow-md flex flex-col mt-16"
+          : "pt-8 h-128 border-2 rounded-xl p-4 bg-slate-100 shadow-md flex flex-col mt-16 relative"
       }`}
     >
       <div className=" w-14 h-14 mx-auto mb-2">
@@ -69,6 +70,7 @@ export const New = ({ news, showGrid }) => {
           )
         })}
       </div>
+      <Manual />
     </div>
   )
 }
