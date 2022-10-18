@@ -27,7 +27,7 @@ export const Research = ({ researches, showLink }) => {
       className={`${
         showLink
           ? "px-14 sm:w-4/5 mx-auto max-w-5xl sm:pt-20"
-          : "px-14 sm:w-4/5 mx-auto max-w-5xl"
+          : "px-14 sm:w-4/5 mx-auto max-w-5xl sm:pt-20"
       }`}
     >
       <h2 className="text-center">
@@ -43,11 +43,12 @@ export const Research = ({ researches, showLink }) => {
       <ul className="grid gap-5">
         {researches.map(item => {
           return (
-            <AnchorLink
-              to={`/Researches#${item.title}`}
-              key={item.id}
-              className="pb-6 w-full"
-            >
+            // <AnchorLink
+            //   to={`/Researches#${item.title}`}
+            //   key={item.id}
+            //   className="pb-6 w-full"
+            // >
+            <div key={item.id} className="pb-6 w-full">
               <p className="subTitle pb-4" id={item.title}>
                 {item.title}
               </p>
@@ -71,7 +72,8 @@ export const Research = ({ researches, showLink }) => {
                   // width={500}
                 />
               </div> */}
-            </AnchorLink>
+              {/* </AnchorLink> */}
+            </div>
           )
         })}
       </ul>

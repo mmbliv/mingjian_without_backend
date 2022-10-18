@@ -70,7 +70,7 @@ export const New = ({ news, showGrid }) => {
           )
         })}
       </div>
-      <Manual />
+      {!showGrid && <Manual />}
     </div>
   )
 }

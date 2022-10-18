@@ -24,12 +24,11 @@ const Home = ({ data }) => {
       <Seo />
       <div className="grid sm:grid-cols-3 gap-10 justify-center sm:mb-11 pb-8 px-8">
         <Aboutme />
-        <div>
-          <New news={news} />
-        </div>
+        <New news={news} />
       </div>
       <PeopleCards graduates={graduates} pi={pi} />
-      <Research researches={researches} showLink />
+      <Research researches={researches} />
+      {/* <Research researches={researches} showLink /> */}
       <Code codes={codes} />
       <Position positions={positions} />
     </Layout>
