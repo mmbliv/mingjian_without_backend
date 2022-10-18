@@ -9,7 +9,7 @@ export const Manual = () => {
         target="_blank"
         rel="noreferrer noopener"
       >
-        <img src={manual} alt="book" className="m-auto w-2/3" />
+        <img src={manual} alt="book" className="m-auto w-40 -mb-3" />
       </a>
     </div>
   )
