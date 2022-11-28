@@ -5,7 +5,7 @@ export const Manual = () => {
   return (
     <div className="w-full absolute -bottom-28 left-0">
       <a
-        href="https://www.chee.uh.edu/faculty/wen-mingjian"
+        href="https://wengroup.github.io/group_manual"
         target="_blank"
         rel="noreferrer noopener"
       >
