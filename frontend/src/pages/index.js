@@ -75,6 +75,7 @@ export const query = graphql`
         email
         name
         id
+        title
         photo {
           localFile {
             childImageSharp {

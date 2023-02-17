@@ -37,17 +37,49 @@ const PeopleCards = ({ graduates, pi }) => {
           <PeopleCard people={pi[0]} />
         </div>
       </div>
+
+      <div>
+        <h2 className="text-center sm:text-left people-title sm:pl-11 ">
+          Postdoc
+        </h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-10 p-11 pt-5">
+          {graduates.map(graduate => {
+            if (graduate.title === "postdoc")
+              return (
+                <div key={graduate.id}>
+                  <PeopleCard people={graduate} />
+                </div>
+              )
+          })}
+        </div>
+      </div>
       <div>
         <h2 className="text-center sm:text-left people-title sm:pl-11 ">
           Graduate Students
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-10 p-11 pt-5">
           {graduates.map(graduate => {
-            return (
-              <div key={graduate.id}>
-                <PeopleCard people={graduate} />
-              </div>
-            )
+            if (graduate.title === "graduate")
+              return (
+                <div key={graduate.id}>
+                  <PeopleCard people={graduate} />
+                </div>
+              )
+          })}
+        </div>
+      </div>
+      <div>
+        <h2 className="text-center sm:text-left people-title sm:pl-11 ">
+          Undergraduate Students
+        </h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-10 p-11 pt-5">
+          {graduates.map(graduate => {
+            if (graduate.title === "undergraduate")
+              return (
+                <div key={graduate.id}>
+                  <PeopleCard people={graduate} />
+                </div>
+              )
           })}
         </div>
       </div>

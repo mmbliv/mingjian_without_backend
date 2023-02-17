@@ -49,6 +49,14 @@
     },
     "cv": {
       "type": "richtext"
+    },
+    "title": {
+      "type": "enumeration",
+      "enum": [
+        "graduate",
+        "postdoc",
+        "undergraduate"
+      ]
     }
   }
 }
