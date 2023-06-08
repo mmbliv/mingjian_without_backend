@@ -2,19 +2,18 @@ import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 const query = graphql`
   {
-    allMarkdownRemark {
+    allMarkdownRemark(
+      filter: { fileAbsolutePath: { regex: "/content_data/graduates/.*/" } }
+      sort: { fields: frontmatter___date, order: ASC }
+    ) {
       nodes {
         html
-        headings {
-          depth
-          value
-        }
         frontmatter {
-          title
-          slug
-          date(formatString: "MMMM Do, YYYY")
-          stack
+          Email
+          name
+          date
         }
+        id
       }
     }
   }

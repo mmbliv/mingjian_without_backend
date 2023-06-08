@@ -32,6 +32,13 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `content_data`,
+        path: `${__dirname}/src/content_data/`,
+      },
+    },
+    {
       resolve: `gatsby-source-strapi`,
       options: {
         apiURL: `http://localhost:1337`,
@@ -60,8 +67,8 @@ module.exports = {
       options: {
         fonts: {
           google: [
-            { family: "Roboto", variants: ["400",  "700"] },
-            { family: "Open Sans", variants: ["400","600", "700"] },
+            { family: "Roboto", variants: ["400", "700"] },
+            { family: "Open Sans", variants: ["400", "600", "700"] },
             { family: "Oswald", variants: ["200", "400"] },
             { family: "Source Sans Pro", variants: ["200", "300", "700"] },
           ],
