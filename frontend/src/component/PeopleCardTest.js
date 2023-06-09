@@ -3,15 +3,16 @@ import { GatsbyImage } from "gatsby-plugin-image"
 import ReactMarkdown from "react-markdown"
 
 const PeopleCardTest = ({ people, img }) => {
-  const { html, email, name, website, photo, cv } = people
-
+  const { html, email, name, website, frontmatter, cv } = people
+  console.log(img)
+  console.log(frontmatter.photo)
   return (
     <>
       <div className="flex flex-col ">
         <div className="flex flex-col sm:flex-row">
           <div className="sm:mx-0  sm:pb-0 text-center">
             {img.map(p => {
-              if (p.relativePath === photo) {
+              if (p.relativePath === frontmatter.photo) {
                 return (
                   <GatsbyImage
                     image={p.childImageSharp.gatsbyImageData}
