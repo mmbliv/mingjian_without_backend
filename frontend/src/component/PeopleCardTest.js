@@ -2,7 +2,7 @@ import React from "react"
 import { GatsbyImage } from "gatsby-plugin-image"
 import ReactMarkdown from "react-markdown"
 
-const PeopleCardTest = ({ people }) => {
+const PeopleCardTest = ({ people, img }) => {
   const { html, email, name, website, photo, cv } = people
 
   return (
@@ -10,11 +10,22 @@ const PeopleCardTest = ({ people }) => {
       <div className="flex flex-col ">
         <div className="flex flex-col sm:flex-row">
           <div className="sm:mx-0  sm:pb-0 text-center">
-            <GatsbyImage
+            {img.map(p => {
+              if (p.relativePath === photo) {
+                return (
+                  <GatsbyImage
+                    image={p.childImageSharp.gatsbyImageData}
+                    alt={name}
+                    className="h-32 w-32 headshot sm:mr-4 "
+                  />
+                )
+              }
+            })}
+            {/* <GatsbyImage
               image={photo.localFile.childImageSharp.gatsbyImageData}
               alt={name}
               className="h-32 w-32 headshot sm:mr-4 "
-            />
+            /> */}
           </div>
           <div className="text-sm self-center text-center sm:text-left">
             <p className="text-lg font-semibold">{name}</p>
@@ -27,7 +38,7 @@ const PeopleCardTest = ({ people }) => {
           </div>
         </div>
         <p className="text-sm mt-5">
-          <ReactMarkdown children={description} className="markdown" />
+          <ReactMarkdown children={html} className="markdown" />
         </p>
         {/* <p className="text-sm mt-5">{description}</p> */}
       </div>

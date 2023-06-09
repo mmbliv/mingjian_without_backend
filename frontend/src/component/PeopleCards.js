@@ -3,6 +3,7 @@ import PeopleCard from "./PeopleCard"
 import { useStaticQuery, graphql } from "gatsby"
 import { SubtitleIcon } from "./SubtitleIcon"
 import { SubtitleIconSvg } from "./SubtitleIconSvg"
+import GraduatesCards from "./GraduatesCards"
 const query = graphql`
   {
     file(name: { eq: "people" }) {
@@ -53,7 +54,8 @@ const PeopleCards = ({ graduates, pi }) => {
           })}
         </div>
       </div>
-      <div>
+      <GraduatesCards />
+      {/* <div>
         <h2 className="text-center sm:text-left people-title sm:pl-11 ">
           Graduate Students
         </h2>
@@ -67,7 +69,7 @@ const PeopleCards = ({ graduates, pi }) => {
               )
           })}
         </div>
-      </div>
+      </div> */}
       <div>
         <h2 className="text-center sm:text-left people-title sm:pl-11 ">
           Undergraduate Students

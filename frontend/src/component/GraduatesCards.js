@@ -1,28 +1,41 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
-const query = `
-{
-  allMarkdownRemark(
-    filter: {fileAbsolutePath: {regex: "/content_data\\/graduates\\/.*/"}}
-    sort: {fields: frontmatter___date, order: ASC}
-  ) {
-    nodes {
-      html
-      frontmatter {
-        Email
-        name
-        date
+import PeopleCardTest from "./PeopleCardTest"
+const query = graphql`
+  {
+    allMarkdownRemark(
+      filter: { fileAbsolutePath: { regex: "/content_data/graduates/.*/" } }
+      sort: { fields: frontmatter___date, order: ASC }
+    ) {
+      nodes {
+        html
+        frontmatter {
+          Email
+          name
+          date
+          photo
+        }
+        id
       }
-      id
+    }
+    allFile(filter: { relativeDirectory: { eq: "photo/graduate_photo" } }) {
+      nodes {
+        relativePath
+        extension
+        publicURL
+        childImageSharp {
+          gatsbyImageData
+        }
+      }
     }
   }
-}
 `
 
 const GraduatesCards = () => {
   const data = useStaticQuery(query)
   const {
     allMarkdownRemark: { nodes: graduates },
+    allFile: { nodes: photo },
   } = data
   if (graduates.length)
     return (
@@ -34,7 +47,8 @@ const GraduatesCards = () => {
           {graduates.map(graduate => {
             return (
               <div key={graduate.id}>
-                <PeopleCard people={graduate} />
+                {/* <PeopleCard people={graduate} /> */}
+                <PeopleCardTest people={graduate} img={photo} />
               </div>
             )
           })}
