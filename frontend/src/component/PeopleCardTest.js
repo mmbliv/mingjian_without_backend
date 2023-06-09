@@ -4,8 +4,8 @@ import ReactMarkdown from "react-markdown"
 
 const PeopleCardTest = ({ people, img }) => {
   const { html, email, name, website, frontmatter, cv } = people
-  console.log(img)
-  console.log(frontmatter.photo)
+  // console.log(img)
+  // console.log(description)
   return (
     <>
       <div className="flex flex-col ">
@@ -39,7 +39,10 @@ const PeopleCardTest = ({ people, img }) => {
           </div>
         </div>
         <p className="text-sm mt-5">
-          <ReactMarkdown children={html} className="markdown" />
+          <ReactMarkdown
+            children={frontmatter.description}
+            className="markdown"
+          />
         </p>
         {/* <p className="text-sm mt-5">{description}</p> */}
       </div>

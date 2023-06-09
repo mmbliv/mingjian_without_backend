@@ -14,6 +14,7 @@ const query = graphql`
           name
           date
           photo
+          description
         }
         id
       }
