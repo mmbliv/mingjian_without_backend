@@ -2,22 +2,16 @@ import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 const query = graphql`
   {
-    allMarkdownRemark(
-      filter: { fileAbsolutePath: { regex: "/content_data/graduates/.*/" } }
-      sort: { fields: frontmatter___date, order: ASC }
-    ) {
-      nodes {
-        html
-        frontmatter {
-          Email
-          name
-          date
-        }
-        id
+    file(name: { eq: "people" }) {
+      childrenImageSharp {
+        gatsbyImageData
       }
+      extension
+      publicURL
     }
   }
 `
+
 const Blog = () => {
   const data = useStaticQuery(query)
 
