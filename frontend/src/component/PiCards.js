@@ -4,7 +4,7 @@ import PeopleCardTest from "./PeopleCardTest"
 const query = graphql`
   {
     allMarkdownRemark(
-      filter: { fileAbsolutePath: { regex: "/content_data/PI/.*/" } }
+      filter: { fileAbsolutePath: { regex: "/content_data/pi/.*/" } }
       sort: { fields: frontmatter___date, order: ASC }
     ) {
       nodes {
@@ -20,7 +20,7 @@ const query = graphql`
         id
       }
     }
-    allFile(filter: { relativeDirectory: { eq: "photo/graduate_photo" } }) {
+    allFile(filter: { relativeDirectory: { eq: "photo/PI_photo" } }) {
       nodes {
         relativePath
         extension
@@ -36,21 +36,21 @@ const query = graphql`
 const PiCards = () => {
   const data = useStaticQuery(query)
   const {
-    allMarkdownRemark: { nodes: graduates },
+    allMarkdownRemark: { nodes: PI },
     allFile: { nodes: photo },
   } = data
-  if (graduates.length)
+  if (PI.length)
     return (
       <div>
         <h2 className="text-center sm:text-left people-title sm:pl-11 ">
-          Graduate Students
+          Principal Investigator
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-10 p-11 pt-5">
-          {graduates.map(graduate => {
+          {PI.map(p => {
             return (
-              <div key={graduate.id}>
+              <div key={p.id}>
                 {/* <PeopleCard people={graduate} /> */}
-                <PeopleCardTest people={graduate} img={photo} />
+                <PeopleCardTest people={p} img={photo} />
               </div>
             )
           })}

@@ -29,16 +29,18 @@ const PeopleCardTest = ({ people, img }) => {
             /> */}
           </div>
           <div className="text-sm self-center text-center sm:text-left">
-            <p className="text-lg font-semibold">{name}</p>
+            <p className="text-lg font-semibold">{frontmatter.name}</p>
             {/* <p className="w-max">{title}</p> */}
-            <p className="text-slate-800">{email}</p>
+            <p className="text-slate-800">{frontmatter.email}</p>
             <p>{website}</p>
             {/* <p>
               <ReactMarkdown children={cv} className="markdown" />
             </p> */}
-            <p>
-              <a href={frontmatter.CV}>CV</a>
-            </p>
+            {frontmatter.CV && (
+              <p>
+                <a href={frontmatter.CV}>CV</a>
+              </p>
+            )}
           </div>
         </div>
         <p className="text-sm mt-5">

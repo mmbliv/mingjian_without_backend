@@ -4,6 +4,7 @@ import { useStaticQuery, graphql } from "gatsby"
 import { SubtitleIcon } from "./SubtitleIcon"
 import { SubtitleIconSvg } from "./SubtitleIconSvg"
 import GraduatesCards from "./GraduatesCards"
+import PiCards from "./PiCards"
 const query = graphql`
   {
     file(name: { eq: "people" }) {
@@ -30,15 +31,16 @@ const PeopleCards = ({ graduates, pi }) => {
           )}
         </div>
       </>
-      <div>
+      {/* <div>
         <h2 className="text-center sm:text-left people-title sm:pl-11">
           Principal Investigator
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-10 p-11 pt-5">
           <PeopleCard people={pi[0]} />
         </div>
-      </div>
+      </div> */}
 
+      <PiCards />
       <div>
         <h2 className="text-center sm:text-left people-title sm:pl-11 ">
           Postdoc
