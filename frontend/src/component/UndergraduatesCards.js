@@ -4,7 +4,9 @@ import PeopleCardTest from "./PeopleCardTest"
 const query = graphql`
   {
     allMarkdownRemark(
-      filter: { fileAbsolutePath: { regex: "/content_data/graduates/.*/" } }
+      filter: {
+        fileAbsolutePath: { regex: "/content_data/undergraduates/.*/" }
+      }
       sort: { fields: frontmatter___date, order: ASC }
     ) {
       nodes {
@@ -18,7 +20,9 @@ const query = graphql`
         id
       }
     }
-    allFile(filter: { relativeDirectory: { eq: "photo/graduate_photo" } }) {
+    allFile(
+      filter: { relativeDirectory: { eq: "photo/undergraduate_photo" } }
+    ) {
       nodes {
         relativePath
         extension
@@ -31,24 +35,24 @@ const query = graphql`
   }
 `
 
-const GraduatesCards = () => {
+const UndergraduatesCards = () => {
   const data = useStaticQuery(query)
   const {
-    allMarkdownRemark: { nodes: graduates },
+    allMarkdownRemark: { nodes: undergraduates },
     allFile: { nodes: photo },
   } = data
-  if (graduates.length)
+  if (undergraduates.length)
     return (
       <div>
         <h2 className="text-center sm:text-left people-title sm:pl-11 ">
-          Graduate Students
+          Undergraduate Students
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-10 p-11 pt-5">
-          {graduates.map(graduate => {
+          {undergraduates.map(undergraduate => {
             return (
-              <div key={graduate.id}>
+              <div key={undergraduate.id}>
                 {/* <PeopleCard people={graduate} /> */}
-                <PeopleCardTest people={graduate} img={photo} />
+                <PeopleCardTest people={undergraduate} img={photo} />
               </div>
             )
           })}
@@ -58,4 +62,4 @@ const GraduatesCards = () => {
   else return null
 }
 
-export default GraduatesCards
+export default UndergraduatesCards

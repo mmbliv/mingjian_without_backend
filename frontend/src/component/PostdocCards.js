@@ -4,7 +4,7 @@ import PeopleCardTest from "./PeopleCardTest"
 const query = graphql`
   {
     allMarkdownRemark(
-      filter: { fileAbsolutePath: { regex: "/content_data/graduates/.*/" } }
+      filter: { fileAbsolutePath: { regex: "/content_data/postdoc/.*/" } }
       sort: { fields: frontmatter___date, order: ASC }
     ) {
       nodes {
@@ -18,7 +18,7 @@ const query = graphql`
         id
       }
     }
-    allFile(filter: { relativeDirectory: { eq: "photo/graduate_photo" } }) {
+    allFile(filter: { relativeDirectory: { eq: "photo/postdoc_photo" } }) {
       nodes {
         relativePath
         extension
@@ -31,24 +31,24 @@ const query = graphql`
   }
 `
 
-const GraduatesCards = () => {
+const PostdocCards = () => {
   const data = useStaticQuery(query)
   const {
-    allMarkdownRemark: { nodes: graduates },
+    allMarkdownRemark: { nodes: postdoc },
     allFile: { nodes: photo },
   } = data
-  if (graduates.length)
+  if (postdoc.length)
     return (
       <div>
         <h2 className="text-center sm:text-left people-title sm:pl-11 ">
-          Graduate Students
+          Postdoc
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-10 p-11 pt-5">
-          {graduates.map(graduate => {
+          {postdoc.map(p => {
             return (
-              <div key={graduate.id}>
+              <div key={p.id}>
                 {/* <PeopleCard people={graduate} /> */}
-                <PeopleCardTest people={graduate} img={photo} />
+                <PeopleCardTest people={postdoc} img={photo} />
               </div>
             )
           })}
@@ -58,4 +58,4 @@ const GraduatesCards = () => {
   else return null
 }
 
-export default GraduatesCards
+export default PostdocCards

@@ -57,6 +57,7 @@ const PiCards = () => {
         </div>
       </div>
     )
+  else return null
 }
 
 export default PiCards

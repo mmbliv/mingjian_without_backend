@@ -126,32 +126,31 @@
   .icon {
     background-color: transparent;
   }
-  .markdown img{
-   padding-top: 1rem;
-    height: 200px;
-    object-fit: cover;
-    margin: 0 auto;
-   }
-  .markdown a{
-    color: #51A0D5;
-  }
-  .markdown a:hover{
-    text-decoration: underline;
-  }
-  .markdown img{
+  .markdown img {
     padding-top: 1rem;
     height: 200px;
     object-fit: cover;
     margin: 0 auto;
   }
-  .markdown a:hover{
-    text-decoration: underline
+  .markdown a {
+    color: #51a0d5;
   }
-  .headshot div{
-    border-radius:50%
+  .markdown a:hover {
+    text-decoration: underline;
+  }
+  .markdown img {
+    padding-top: 1rem;
+    height: 200px;
+    object-fit: cover;
+    margin: 0 auto;
+  }
+  .markdown a:hover {
+    text-decoration: underline;
+  }
+  .headshot div {
+    border-radius: 50%;
   }
   .headshot img {
-    border-radius: 50%
+    border-radius: 50%;
   }
-  
 }

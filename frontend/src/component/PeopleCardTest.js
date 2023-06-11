@@ -37,7 +37,7 @@ const PeopleCardTest = ({ people, img }) => {
               <ReactMarkdown children={cv} className="markdown" />
             </p> */}
             {frontmatter.CV && (
-              <p>
+              <p className="markdown">
                 <a href={frontmatter.CV}>CV</a>
               </p>
             )}

@@ -5,6 +5,8 @@ import { SubtitleIcon } from "./SubtitleIcon"
 import { SubtitleIconSvg } from "./SubtitleIconSvg"
 import GraduatesCards from "./GraduatesCards"
 import PiCards from "./PiCards"
+import PostdocCards from "./PostdocCards"
+import UndergraduatesCards from "./UndergraduatesCards"
 const query = graphql`
   {
     file(name: { eq: "people" }) {
@@ -41,7 +43,7 @@ const PeopleCards = ({ graduates, pi }) => {
       </div> */}
 
       <PiCards />
-      <div>
+      {/* <div>
         <h2 className="text-center sm:text-left people-title sm:pl-11 ">
           Postdoc
         </h2>
@@ -55,7 +57,8 @@ const PeopleCards = ({ graduates, pi }) => {
               )
           })}
         </div>
-      </div>
+      </div> */}
+      <PostdocCards />
       <GraduatesCards />
       {/* <div>
         <h2 className="text-center sm:text-left people-title sm:pl-11 ">
@@ -72,7 +75,7 @@ const PeopleCards = ({ graduates, pi }) => {
           })}
         </div>
       </div> */}
-      <div>
+      {/* <div>
         <h2 className="text-center sm:text-left people-title sm:pl-11 ">
           Undergraduate Students
         </h2>
@@ -86,7 +89,8 @@ const PeopleCards = ({ graduates, pi }) => {
               )
           })}
         </div>
-      </div>
+      </div> */}
+      <UndergraduatesCards />
     </div>
   )
 }
