@@ -4,16 +4,18 @@ import PeopleCardTest from "./PeopleCardTest"
 const query = graphql`
   {
     allMarkdownRemark(
-      filter: { fileAbsolutePath: { regex: "/content_data/graduates/.*/" } }
+      filter: { fileAbsolutePath: { regex: "/content_data/PI/.*/" } }
       sort: { fields: frontmatter___date, order: ASC }
     ) {
       nodes {
+        html
         frontmatter {
           Email
           name
           date
           photo
           description
+          CV
         }
         id
       }
@@ -31,7 +33,7 @@ const query = graphql`
   }
 `
 
-const GraduatesCards = () => {
+const PiCards = () => {
   const data = useStaticQuery(query)
   const {
     allMarkdownRemark: { nodes: graduates },
@@ -57,4 +59,4 @@ const GraduatesCards = () => {
     )
 }
 
-export default GraduatesCards
+export default PiCards

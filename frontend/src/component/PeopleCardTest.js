@@ -33,8 +33,11 @@ const PeopleCardTest = ({ people, img }) => {
             {/* <p className="w-max">{title}</p> */}
             <p className="text-slate-800">{email}</p>
             <p>{website}</p>
-            <p>
+            {/* <p>
               <ReactMarkdown children={cv} className="markdown" />
+            </p> */}
+            <p>
+              <a href={frontmatter.CV}>CV</a>
             </p>
           </div>
         </div>
