@@ -38,48 +38,6 @@ module.exports = {
         path: `${__dirname}/src/content_data/`,
       },
     },
-    // {
-    //   resolve: `gatsby-source-filesystem`,
-    //   options: {
-    //     name: `content_data_photo`,
-    //     path: `${__dirname}/src/content_data/photo/code_photo`,
-    //   },
-    // },
-    // {
-    //   resolve: `gatsby-source-filesystem`,
-    //   options: {
-    //     name: `content_data_photo_graduate`,
-    //     path: `${__dirname}/src/content_data/photo/graduate_photo`,
-    //   },
-    // },
-    // {
-    //   resolve: `gatsby-source-filesystem`,
-    //   options: {
-    //     name: `content_data_photo`,
-    //     path: `${__dirname}/src/content_data/photo/undergraduate_photo`,
-    //   },
-    // },
-    // {
-    //   resolve: `gatsby-source-filesystem`,
-    //   options: {
-    //     name: `content_data_photo`,
-    //     path: `${__dirname}/src/content_data/photo/PI_photo`,
-    //   },
-    // },
-    // {
-    //   resolve: `gatsby-source-filesystem`,
-    //   options: {
-    //     name: `content_data_photo`,
-    //     path: `${__dirname}/src/content_data/photo/postdoc_photo`,
-    //   },
-    // },
-    // {
-    //   resolve: `gatsby-source-filesystem`,
-    //   options: {
-    //     name: `content_data_photo`,
-    //     path: `${__dirname}/src/content_data/photo/hero_img`,
-    //   },
-    // },
     {
       resolve: `gatsby-source-strapi`,
       options: {
