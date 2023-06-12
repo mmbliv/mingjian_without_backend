@@ -8,23 +8,24 @@ import { graphql } from "gatsby"
 import PeopleCards from "../component/PeopleCards"
 import Seo from "../component/Seo"
 import { Position } from "../component/Position"
+import { convertHtmlToArray } from "../utils/convertHtmlToArray"
 
 const Home = ({ data }) => {
   const {
     allStrapiCodes: { nodes: codes },
     allStrapiResearchWorks: { nodes: researches },
-    allStrapiNews: { nodes: news },
+    allMarkdownRemark: { nodes: news },
     allStrapiGraduates: { nodes: graduates },
     allStrapiPi: { nodes: pi },
     allStrapiPositions: { nodes: positions },
   } = data
-
+  const newsArray = convertHtmlToArray(news[0].html)
   return (
     <Layout>
       <Seo />
       <div className="grid sm:grid-cols-3 gap-10 justify-center sm:mb-11 pb-8 px-8">
         <Aboutme />
-        <New news={news} />
+        <New news={newsArray} />
       </div>
       <PeopleCards graduates={graduates} pi={pi} />
       <Research researches={researches} />
@@ -86,19 +87,12 @@ export const query = graphql`
         website
       }
     }
-    allStrapiNews(sort: { fields: id, order: DESC }) {
+    allMarkdownRemark(
+      filter: { fileAbsolutePath: { regex: "/content_data/news/.*/" } }
+    ) {
       nodes {
-        content
         id
-        title
-        date(formatString: "MMMM Do, YYYY")
-        # img {
-        #   localFile {
-        #     childImageSharp {
-        #       gatsbyImageData
-        #     }
-        #   }
-        # }
+        html
       }
     }
     allStrapiResearchWorks(

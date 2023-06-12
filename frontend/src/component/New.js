@@ -51,7 +51,7 @@ export const New = ({ news, showGrid }) => {
             )
           }
           return (
-            <ul className=" mb-5">
+            <ul className=" mb-5" key={item.id}>
               <li className=" pb-5">
                 <div className="flex flex-row" id={item.frontmatter.id}>
                   <p className="subTitle text-sm">{item.frontmatter.date}</p>
