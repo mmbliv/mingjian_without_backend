@@ -2,6 +2,7 @@ import React from "react"
 import Layout from "../component/Layout"
 import { graphql } from "gatsby"
 import { New } from "../component/New"
+import { convertHtmlToArray } from "../utils/convertHtmlToArray"
 
 const News = ({ data }) => {
   const {
@@ -9,7 +10,7 @@ const News = ({ data }) => {
   } = data
   return (
     <Layout>
-      <New news={news} showGrid />
+      <New news={dataArray} showGrid />
     </Layout>
   )
 }
