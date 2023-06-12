@@ -4,6 +4,7 @@
   "description": "A simplified bare-bones starter for Gatsby",
   "version": "0.1.0",
   "license": "0BSD",
+  "type": "module",
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
@@ -30,6 +31,7 @@
     "gatsby-source-strapi": "^1.0.3",
     "gatsby-transformer-remark": "^5.12.1",
     "gatsby-transformer-sharp": "^4.12.1",
+    "jsdom": "^22.1.0",
     "postcss": "^8.4.12",
     "prismjs": "^1.28.0",
     "react": "^17.0.1",
