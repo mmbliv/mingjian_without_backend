@@ -5,9 +5,8 @@ import { New } from "../component/New"
 
 const News = ({ data }) => {
   const {
-    allStrapiNews: { nodes: news },
+    allMarkdownRemark: { nodes: news },
   } = data
-
   return (
     <Layout>
       <New news={news} showGrid />
@@ -16,19 +15,16 @@ const News = ({ data }) => {
 }
 export const query = graphql`
   {
-    allStrapiNews(sort: { fields: id, order: DESC }) {
+    allMarkdownRemark(
+      filter: { fileAbsolutePath: { regex: "/content_data/news/.*/" } }
+      sort: { fields: frontmatter___date, order: ASC }
+    ) {
       nodes {
-        content
+        frontmatter {
+          date
+          content
+        }
         id
-        title
-        date(formatString: "MMMM Do, YYYY")
-        # img {
-        #   localFile {
-        #     childImageSharp {
-        #       gatsbyImageData
-        #     }
-        #   }
-        # }
       }
     }
   }

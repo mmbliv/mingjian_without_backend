@@ -24,10 +24,10 @@ export const New = ({ news, showGrid }) => {
         {news.map(item => {
           if (!showGrid) {
             return (
-              <AnchorLink to={`/News#${item.title}`} key={item.id}>
+              <AnchorLink to={`/News#${item.id}`} key={item.id}>
                 <ul className=" mb-5">
                   <li className=" pb-5">
-                    <div className="flex flex-row" id={item.title}>
+                    <div className="flex flex-row" id={item.id}>
                       <p className="subTitle text-sm">{item.date}</p>
                     </div>
                     {/* <p>{item.content}</p> */}
@@ -50,8 +50,8 @@ export const New = ({ news, showGrid }) => {
           return (
             <ul className=" mb-5">
               <li className=" pb-5">
-                <div className="flex flex-row" id={item.title}>
-                  <p className="subTitle text-sm">{item.date}</p>
+                <div className="flex flex-row" id={item.frontmatter.id}>
+                  <p className="subTitle text-sm">{item.frontmatter.date}</p>
                 </div>
                 {/* <p>{item.content}</p> */}
                 <div
@@ -60,7 +60,7 @@ export const New = ({ news, showGrid }) => {
                   }`}
                 >
                   <ReactMarkdown
-                    children={item.content}
+                    children={item.frontmatter.content}
                     // className="markdown"
                   />
                 </div>
