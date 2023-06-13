@@ -19,7 +19,7 @@ const query = graphql`
   }
 `
 
-const PeopleCards = ({ graduates, pi }) => {
+const PeopleCards = () => {
   const data = useStaticQuery(query)
   return (
     <div id="people">

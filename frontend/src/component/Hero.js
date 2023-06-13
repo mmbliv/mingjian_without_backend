@@ -4,7 +4,7 @@ import { GatsbyImage } from "gatsby-plugin-image"
 
 const query = graphql`
   {
-    allFile(filter: { relativeDirectory: { eq: "photo/hero_img" } }) {
+    allFile(filter: { relativeDirectory: { eq: "img/hero_img" } }) {
       nodes {
         relativePath
         extension

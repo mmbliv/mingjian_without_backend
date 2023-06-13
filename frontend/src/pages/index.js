@@ -14,12 +14,15 @@ const Home = ({ data }) => {
   const {
     allStrapiCodes: { nodes: codes },
     allStrapiResearchWorks: { nodes: researches },
-    allMarkdownRemark: { nodes: news },
-    allStrapiGraduates: { nodes: graduates },
-    allStrapiPi: { nodes: pi },
+    // allMarkdownRemark: { nodes: news },
+    // allStrapiGraduates: { nodes: graduates },
+    // allStrapiPi: { nodes: pi },
     allStrapiPositions: { nodes: positions },
   } = data
-  const newsArray = convertHtmlToArray(news[0].html)
+  const researchData = data.researchData.nodes
+  const newsData = data.newsData.nodes
+  const newsArray = convertHtmlToArray(newsData[0].html)
+  console.log(researchData)
   return (
     <Layout>
       <Seo />
@@ -27,7 +30,7 @@ const Home = ({ data }) => {
         <Aboutme />
         <New news={newsArray} />
       </div>
-      <PeopleCards graduates={graduates} pi={pi} />
+      <PeopleCards />
       <Research researches={researches} />
       {/* <Research researches={researches} showLink /> */}
       <Code codes={codes} />
@@ -87,12 +90,23 @@ export const query = graphql`
         website
       }
     }
-    allMarkdownRemark(
+    newsData: allMarkdownRemark(
       filter: { fileAbsolutePath: { regex: "/content_data/news/.*/" } }
     ) {
       nodes {
         id
         html
+      }
+    }
+    researchData: allMarkdownRemark(
+      filter: { fileAbsolutePath: { regex: "/content_data/research/.*/" } }
+    ) {
+      nodes {
+        frontmatter {
+          title
+          content
+        }
+        id
       }
     }
     allStrapiResearchWorks(
