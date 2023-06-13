@@ -8,6 +8,7 @@ const News = ({ data }) => {
   const {
     allMarkdownRemark: { nodes: news },
   } = data
+  const dataArray = convertHtmlToArray(news[0].html)
   return (
     <Layout>
       <New news={dataArray} showGrid />
@@ -18,14 +19,10 @@ export const query = graphql`
   {
     allMarkdownRemark(
       filter: { fileAbsolutePath: { regex: "/content_data/news/.*/" } }
-      sort: { fields: frontmatter___date, order: ASC }
     ) {
       nodes {
-        frontmatter {
-          date
-          content
-        }
         id
+        html
       }
     }
   }

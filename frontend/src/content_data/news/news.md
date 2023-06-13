@@ -1,8 +1,3 @@
----
-date: 2023-01-18
-content: Our new Perspective discussing "Chemical Reaction Networks and Opportunities for Machine Learning" appeared in *Nature Computational Science*!
----
-
 # January 18th, 2023
 
 Our new Perspective discussing "Chemical Reaction Networks and Opportunities for Machine Learning" appeared in _Nature Computational Science_!

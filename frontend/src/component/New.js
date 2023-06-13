@@ -5,7 +5,6 @@ import ReactMarkdown from "react-markdown"
 import { Manual } from "./Manual"
 
 export const New = ({ news, showGrid }) => {
-  console.log(news)
   return (
     <div
       id="news"
@@ -26,10 +25,8 @@ export const New = ({ news, showGrid }) => {
           if (!showGrid) {
             return (
               <AnchorLink to={`/News#${item.id}`} key={item.id}>
-              <AnchorLink to={`/News#${item.id}`} key={item.id}>
                 <ul className=" mb-5">
                   <li className=" pb-5">
-                    <div className="flex flex-row" id={item.id}>
                     <div className="flex flex-row" id={item.id}>
                       <p className="subTitle text-sm">{item.date}</p>
                     </div>
@@ -51,7 +48,7 @@ export const New = ({ news, showGrid }) => {
             )
           }
           return (
-            <ul className=" mb-5" key={item.id}>
+            <ul className=" mb-5">
               <li className=" pb-5">
                 <div className="flex flex-row" id={item.frontmatter.id}>
                   <p className="subTitle text-sm">{item.frontmatter.date}</p>

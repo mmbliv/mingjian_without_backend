@@ -104,7 +104,6 @@ export const query = graphql`
       nodes {
         frontmatter {
           title
-          content
         }
         html
         id
