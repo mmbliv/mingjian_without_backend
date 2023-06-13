@@ -22,7 +22,7 @@ const Home = ({ data }) => {
   const researchData = data.researchData.nodes
   const newsData = data.newsData.nodes
   const newsArray = convertHtmlToArray(newsData[0].html)
-  console.log(researchData)
+  console.log(researches)
   return (
     <Layout>
       <Seo />
@@ -31,7 +31,7 @@ const Home = ({ data }) => {
         <New news={newsArray} />
       </div>
       <PeopleCards />
-      <Research researches={researches} />
+      <Research researches={researchData} />
       {/* <Research researches={researches} showLink /> */}
       <Code codes={codes} />
       <Position positions={positions} />
@@ -106,6 +106,7 @@ export const query = graphql`
           title
           content
         }
+        html
         id
       }
     }
