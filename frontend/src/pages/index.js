@@ -11,17 +11,18 @@ import { Position } from "../component/Position"
 import { convertHtmlToArray } from "../utils/convertHtmlToArray"
 
 const Home = ({ data }) => {
-  const {
-    // allStrapiCodes: { nodes: codes },
-    // allStrapiResearchWorks: { nodes: researches },
-    // allMarkdownRemark: { nodes: news },
-    // allStrapiGraduates: { nodes: graduates },
-    // allStrapiPi: { nodes: pi },
-    allStrapiPositions: { nodes: positions },
-  } = data
+  // const {
+  //   allStrapiCodes: { nodes: codes },
+  //   allStrapiResearchWorks: { nodes: researches },
+  //   allMarkdownRemark: { nodes: news },
+  //   allStrapiGraduates: { nodes: graduates },
+  //   allStrapiPi: { nodes: pi },
+  //   allStrapiPositions: { nodes: positions },
+  // } = data
   const researchData = data.researchData.nodes
   const newsData = data.newsData.nodes
   const codeData = data.codeData.nodes
+  const positionData = data.positionData.nodes
   const newsArray = convertHtmlToArray(newsData[0].html)
   return (
     <Layout>
@@ -34,7 +35,7 @@ const Home = ({ data }) => {
       <Research researches={researchData} />
       {/* <Research researches={researches} showLink /> */}
       <Code codes={codeData} />
-      <Position positions={positions} />
+      <Position positions={positionData} />
     </Layout>
   )
 }
@@ -121,6 +122,17 @@ export const query = graphql`
         }
         html
         id
+      }
+    }
+    positionData: allMarkdownRemark(
+      filter: { fileAbsolutePath: { regex: "/content_data/position/.*/" } }
+    ) {
+      nodes {
+        id
+        frontmatter {
+          title
+          description
+        }
       }
     }
     allStrapiResearchWorks(

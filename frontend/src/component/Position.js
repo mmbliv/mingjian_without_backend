@@ -32,10 +32,13 @@ export const Position = ({ positions }) => {
           return (
             <li key={p.id} className=" mb-7">
               <h2 className="text-center sm:text-left people-title pb-2">
-                {p.title}
+                {p.frontmatter.title}
               </h2>
               <p>
-                <ReactMarkdown children={p.content} className="markdown" />
+                <ReactMarkdown
+                  children={p.frontmatter.description}
+                  className="markdown"
+                />
               </p>
               {/* <p>{p.content}</p> */}
             </li>
