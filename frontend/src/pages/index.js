@@ -103,6 +103,7 @@ export const query = graphql`
     ) {
       nodes {
         frontmatter {
+          img
           title
         }
         html
