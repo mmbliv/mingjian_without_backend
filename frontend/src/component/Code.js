@@ -46,21 +46,24 @@ export const Code = ({ codes, showLink, showGrid }) => {
               key={item.id}
               className="border-yellow-600 border-b-4 rounded-lg p-5 bg-slate-100 shadow-xl max-w-3xl"
             >
-              <p className="subTitle">{item.title}</p>
+              <p className="subTitle">{item.frontmatter.title}</p>
               <p>
-                <ReactMarkdown children={item.content} className="markdown" />
+                <ReactMarkdown
+                  children={item.frontmatter.description}
+                  className="markdown"
+                />
               </p>
               {/* <p>{item.content}</p> */}
 
               <a
-                href={item.github}
+                href={item.frontmatter.github}
                 className="pt-2 flex items-center hover:underline hover:text-Button"
               >
                 <FaGithubSquare />
                 <p className="pl-3 ">GitHub</p>
               </a>
               <a
-                href={item.document}
+                href={item.frontmatter.document}
                 className="pt-2 flex items-center hover:underline hover:text-Button"
               >
                 <GrDocument />

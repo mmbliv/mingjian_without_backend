@@ -12,8 +12,8 @@ import { convertHtmlToArray } from "../utils/convertHtmlToArray"
 
 const Home = ({ data }) => {
   const {
-    allStrapiCodes: { nodes: codes },
-    allStrapiResearchWorks: { nodes: researches },
+    // allStrapiCodes: { nodes: codes },
+    // allStrapiResearchWorks: { nodes: researches },
     // allMarkdownRemark: { nodes: news },
     // allStrapiGraduates: { nodes: graduates },
     // allStrapiPi: { nodes: pi },
@@ -21,8 +21,8 @@ const Home = ({ data }) => {
   } = data
   const researchData = data.researchData.nodes
   const newsData = data.newsData.nodes
+  const codeData = data.codeData.nodes
   const newsArray = convertHtmlToArray(newsData[0].html)
-  console.log(researches)
   return (
     <Layout>
       <Seo />
@@ -33,7 +33,7 @@ const Home = ({ data }) => {
       <PeopleCards />
       <Research researches={researchData} />
       {/* <Research researches={researches} showLink /> */}
-      <Code codes={codes} />
+      <Code codes={codeData} />
       <Position positions={positions} />
     </Layout>
   )
@@ -96,6 +96,19 @@ export const query = graphql`
       nodes {
         id
         html
+      }
+    }
+    codeData: allMarkdownRemark(
+      filter: { fileAbsolutePath: { regex: "/content_data/code/.*/" } }
+    ) {
+      nodes {
+        id
+        frontmatter {
+          title
+          github
+          document
+          description
+        }
       }
     }
     researchData: allMarkdownRemark(
