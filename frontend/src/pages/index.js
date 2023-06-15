@@ -144,13 +144,6 @@ export const query = graphql`
         id
         title
         content
-        # img {
-        #   localFile {
-        #     childImageSharp {
-        #       gatsbyImageData(height: 200)
-        #     }
-        #   }
-        # }
       }
     }
     allStrapiPositions(filter: { show_it: { eq: true } }) {

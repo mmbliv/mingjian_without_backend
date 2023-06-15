@@ -4,9 +4,12 @@ import { Publication } from "./Publication"
 import ReactMarkdown from "react-markdown"
 const query = graphql`
   {
-    allStrapiAbout {
+    allMarkdownRemark(
+      filter: { fileAbsolutePath: { glob: "**/content_data/about.md" } }
+    ) {
       nodes {
-        about
+        id
+        html
       }
     }
   }
@@ -15,7 +18,7 @@ const query = graphql`
 export const Aboutme = () => {
   const data = useStaticQuery(query)
   const {
-    allStrapiAbout: { nodes: about },
+    allMarkdownRemark: { nodes: about },
   } = data
 
   return (
@@ -25,7 +28,8 @@ export const Aboutme = () => {
         <h2 className="text-center">ABOUT</h2>
         <div className="flex flex-row justify-center mb-10"></div>
         <p>
-          <ReactMarkdown children={about[0].about} className="markdown" />
+          <div dangerouslySetInnerHTML={{ __html: about[0].html }} />
+          {/* <ReactMarkdown children={about[0].about} className="markdown" /> */}
         </p>
       </div>
       {/* this is the publication div */}
