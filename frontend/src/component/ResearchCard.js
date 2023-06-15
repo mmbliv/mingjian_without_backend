@@ -22,6 +22,8 @@ const ResearchCard = ({ item, imgs }) => {
                 className="w-1/2"
               />
             )
+          } else {
+            return null
           }
         })}
       </div>

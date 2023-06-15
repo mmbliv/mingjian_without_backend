@@ -1,11 +1,9 @@
 import React from "react"
 // import { GatsbyImage } from "gatsby-plugin-image"
 import { Link } from "gatsby"
-import { AnchorLink } from "gatsby-plugin-anchor-links"
 import { SubtitleIcon } from "./SubtitleIcon"
 import { SubtitleIconSvg } from "./SubtitleIconSvg"
 import { useStaticQuery, graphql } from "gatsby"
-import ReactMarkdown from "react-markdown"
 import ResearchCard from "./ResearchCard"
 
 const query = graphql`

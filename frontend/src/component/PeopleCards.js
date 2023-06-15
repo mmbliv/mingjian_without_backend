@@ -1,5 +1,4 @@
 import React from "react"
-import PeopleCard from "./PeopleCard"
 import { useStaticQuery, graphql } from "gatsby"
 import { SubtitleIcon } from "./SubtitleIcon"
 import { SubtitleIconSvg } from "./SubtitleIconSvg"

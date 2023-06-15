@@ -10,7 +10,7 @@ const query = graphql`
   }
 `
 const PeopleCardTest = ({ people, img, pi }) => {
-  const { html, email, name, website, frontmatter, cv } = people
+  const { name, website, frontmatter } = people
   // console.log(img)
   // console.log(description)
   const data = useStaticQuery(query)
@@ -28,6 +28,8 @@ const PeopleCardTest = ({ people, img, pi }) => {
                     className="h-32 w-32 headshot sm:mr-4 "
                   />
                 )
+              } else {
+                return null
               }
             })}
             {/* <GatsbyImage

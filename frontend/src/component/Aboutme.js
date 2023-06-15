@@ -1,7 +1,6 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import { Publication } from "./Publication"
-import ReactMarkdown from "react-markdown"
 const query = graphql`
   {
     allMarkdownRemark(
