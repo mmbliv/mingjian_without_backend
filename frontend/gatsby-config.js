@@ -17,13 +17,13 @@ module.exports = {
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-postcss`,
     `gatsby-plugin-anchor-links`,
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `blogs`,
-        path: `${__dirname}/src/blogs/`,
-      },
-    },
+    // {
+    //   resolve: `gatsby-source-filesystem`,
+    //   options: {
+    //     name: `blogs`,
+    //     path: `${__dirname}/src/blogs/`,
+    //   },
+    // },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -38,24 +38,24 @@ module.exports = {
         path: `${__dirname}/src/content_data/`,
       },
     },
-    {
-      resolve: `gatsby-source-strapi`,
-      options: {
-        apiURL: `http://localhost:1337`,
-        queryLimit: 1000, // Default to 100
-        //   contentTypes : `jobs`, `projects`, `blogs`,
-        //   singleType : `about`
-        //  ONLY ADD TO ARRAY IF YOU HAVE DATA IN STRAPI !!!!
-        collectionTypes: [
-          `codes`,
-          `research-works`,
-          `news`,
-          `graduates`,
-          `positions`,
-        ],
-        singleTypes: [`hero`, `about`, `PI`],
-      },
-    },
+    // {
+    //   resolve: `gatsby-source-strapi`,
+    //   options: {
+    //     apiURL: `http://localhost:1337`,
+    //     queryLimit: 1000, // Default to 100
+    //     //   contentTypes : `jobs`, `projects`, `blogs`,
+    //     //   singleType : `about`
+    //     //  ONLY ADD TO ARRAY IF YOU HAVE DATA IN STRAPI !!!!
+    //     collectionTypes: [
+    //       `codes`,
+    //       `research-works`,
+    //       `news`,
+    //       `graduates`,
+    //       `positions`,
+    //     ],
+    //     singleTypes: [`hero`, `about`, `PI`],
+    //   },
+    // },
     {
       resolve: `gatsby-plugin-material-ui`,
       options: {

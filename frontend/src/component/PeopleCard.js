@@ -39,7 +39,7 @@ const PeopleCardTest = ({ people, img, pi }) => {
           <div className="text-sm self-center text-center sm:text-left">
             <p className="text-lg font-semibold">{frontmatter.name}</p>
             {/* <p className="w-max">{title}</p> */}
-            <p className="text-slate-800">{frontmatter.email}</p>
+            <p className="text-slate-800">{frontmatter.Email}</p>
             <p>{website}</p>
 
             {pi && (

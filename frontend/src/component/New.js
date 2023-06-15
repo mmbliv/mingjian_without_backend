@@ -50,8 +50,8 @@ export const New = ({ news, showGrid }) => {
           return (
             <ul className=" mb-5">
               <li className=" pb-5">
-                <div className="flex flex-row" id={item.frontmatter.id}>
-                  <p className="subTitle text-sm">{item.frontmatter.date}</p>
+                <div className="flex flex-row" id={item.id}>
+                  <p className="subTitle text-sm">{item.date}</p>
                 </div>
                 {/* <p>{item.content}</p> */}
                 <div
@@ -60,7 +60,7 @@ export const New = ({ news, showGrid }) => {
                   }`}
                 >
                   <ReactMarkdown
-                    children={item.frontmatter.content}
+                    children={item.content}
                     // className="markdown"
                   />
                 </div>

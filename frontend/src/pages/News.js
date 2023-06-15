@@ -18,7 +18,7 @@ const News = ({ data }) => {
 export const query = graphql`
   {
     allMarkdownRemark(
-      filter: { fileAbsolutePath: { regex: "/content_data/news/.*/" } }
+      filter: { fileAbsolutePath: { glob: "**/content_data/news.md" } }
     ) {
       nodes {
         id

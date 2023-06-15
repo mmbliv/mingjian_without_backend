@@ -41,58 +41,8 @@ const Home = ({ data }) => {
 }
 export const query = graphql`
   {
-    allStrapiCodes(
-      # limit: 3
-      sort: { fields: order, order: ASC }
-      filter: { show_it: { eq: true } }
-    ) {
-      nodes {
-        content
-        github
-        document
-        title
-        id
-      }
-    }
-    allStrapiPi {
-      nodes {
-        photo {
-          localFile {
-            childImageSharp {
-              gatsbyImageData
-            }
-          }
-        }
-        name
-        email
-        description
-        id
-        title
-        cv
-      }
-    }
-    allStrapiGraduates(
-      sort: { fields: order, order: ASC }
-      filter: { show_it: { eq: true } }
-    ) {
-      nodes {
-        description
-        email
-        name
-        id
-        title
-        photo {
-          localFile {
-            childImageSharp {
-              gatsbyImageData
-            }
-          }
-        }
-        website
-      }
-    }
     newsData: allMarkdownRemark(
-      filter: { fileAbsolutePath: { regex: "/content_data/news/.*/" } }
+      filter: { fileAbsolutePath: { glob: "**/content_data/news.md" } }
     ) {
       nodes {
         id
@@ -133,24 +83,6 @@ export const query = graphql`
           title
           description
         }
-      }
-    }
-    allStrapiResearchWorks(
-      limit: 4
-      filter: { show_it: { eq: true } }
-      sort: { fields: order, order: ASC }
-    ) {
-      nodes {
-        id
-        title
-        content
-      }
-    }
-    allStrapiPositions(filter: { show_it: { eq: true } }) {
-      nodes {
-        title
-        content
-        id
       }
     }
   }
