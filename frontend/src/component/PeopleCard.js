@@ -1,11 +1,20 @@
 import React from "react"
 import { GatsbyImage } from "gatsby-plugin-image"
 import ReactMarkdown from "react-markdown"
-
-const PeopleCardTest = ({ people, img }) => {
+import { useStaticQuery, graphql } from "gatsby"
+const query = graphql`
+  {
+    file(name: { eq: "CV_mingjian" }) {
+      publicURL
+    }
+  }
+`
+const PeopleCardTest = ({ people, img, pi }) => {
   const { html, email, name, website, frontmatter, cv } = people
   // console.log(img)
   // console.log(description)
+  const data = useStaticQuery(query)
+  console.log(data)
   return (
     <>
       <div className="flex flex-col ">
@@ -33,12 +42,10 @@ const PeopleCardTest = ({ people, img }) => {
             {/* <p className="w-max">{title}</p> */}
             <p className="text-slate-800">{frontmatter.email}</p>
             <p>{website}</p>
-            {/* <p>
-              <ReactMarkdown children={cv} className="markdown" />
-            </p> */}
-            {frontmatter.CV && (
+
+            {pi && (
               <p className="markdown">
-                <a href={frontmatter.CV}>CV</a>
+                <a href={data.file.publicURL}>CV</a>
               </p>
             )}
           </div>

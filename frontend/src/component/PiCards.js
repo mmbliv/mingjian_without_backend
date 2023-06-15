@@ -50,7 +50,7 @@ const PiCards = () => {
             return (
               <div key={p.id}>
                 {/* <PeopleCard people={graduate} /> */}
-                <PeopleCardTest people={p} img={photo} />
+                <PeopleCardTest people={p} img={photo} pi />
               </div>
             )
           })}
