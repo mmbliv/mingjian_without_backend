@@ -14,7 +14,6 @@ const PeopleCardTest = ({ people, img, pi }) => {
   // console.log(img)
   // console.log(description)
   const data = useStaticQuery(query)
-  console.log(data)
   return (
     <>
       <div className="flex flex-col ">

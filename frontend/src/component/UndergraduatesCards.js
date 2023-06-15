@@ -5,7 +5,7 @@ const query = graphql`
   {
     allMarkdownRemark(
       filter: {
-        fileAbsolutePath: { regex: "/content_data/undergraduates/.*/" }
+        fileAbsolutePath: { regex: "/content_data/people/undergraduates/.*/" }
       }
       sort: { fields: frontmatter___date, order: ASC }
     ) {
@@ -21,7 +21,9 @@ const query = graphql`
       }
     }
     allFile(
-      filter: { relativeDirectory: { eq: "photo/undergraduate_photo" } }
+      filter: {
+        relativeDirectory: { eq: "people/undergraduate/undergraduate_photo" }
+      }
     ) {
       nodes {
         relativePath

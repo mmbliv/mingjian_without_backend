@@ -4,7 +4,7 @@ import PeopleCardTest from "./PeopleCard"
 const query = graphql`
   {
     allMarkdownRemark(
-      filter: { fileAbsolutePath: { regex: "/content_data/pi/.*/" } }
+      filter: { fileAbsolutePath: { regex: "/content_data/people/pi/.*/" } }
       sort: { fields: frontmatter___date, order: ASC }
     ) {
       nodes {
@@ -20,7 +20,7 @@ const query = graphql`
         id
       }
     }
-    allFile(filter: { relativeDirectory: { eq: "photo/PI_photo" } }) {
+    allFile(filter: { relativeDirectory: { eq: "people/pi/PI_photo" } }) {
       nodes {
         relativePath
         extension

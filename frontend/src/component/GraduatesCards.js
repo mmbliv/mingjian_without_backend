@@ -4,7 +4,9 @@ import PeopleCardTest from "./PeopleCard"
 const query = graphql`
   {
     allMarkdownRemark(
-      filter: { fileAbsolutePath: { regex: "/content_data/graduates/.*/" } }
+      filter: {
+        fileAbsolutePath: { regex: "/content_data/people/graduates/.*/" }
+      }
       sort: { fields: frontmatter___date, order: ASC }
     ) {
       nodes {
@@ -18,7 +20,9 @@ const query = graphql`
         id
       }
     }
-    allFile(filter: { relativeDirectory: { eq: "photo/graduate_photo" } }) {
+    allFile(
+      filter: { relativeDirectory: { eq: "people/graduates/graduate_photo" } }
+    ) {
       nodes {
         relativePath
         extension
@@ -37,6 +41,7 @@ const GraduatesCards = () => {
     allMarkdownRemark: { nodes: graduates },
     allFile: { nodes: photo },
   } = data
+  console.log(photo)
   if (graduates.length)
     return (
       <div>
