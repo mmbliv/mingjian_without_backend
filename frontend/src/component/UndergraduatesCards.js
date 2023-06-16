@@ -21,9 +21,7 @@ const query = graphql`
       }
     }
     allFile(
-      filter: {
-        relativeDirectory: { eq: "people/undergraduate/undergraduate_photo" }
-      }
+      filter: { relativeDirectory: { eq: "people/undergraduate/photo" } }
     ) {
       nodes {
         relativePath

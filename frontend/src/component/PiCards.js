@@ -15,12 +15,11 @@ const query = graphql`
           date
           photo
           description
-          CV
         }
         id
       }
     }
-    allFile(filter: { relativeDirectory: { eq: "people/pi/PI_photo" } }) {
+    allFile(filter: { relativeDirectory: { eq: "people/pi/photo" } }) {
       nodes {
         relativePath
         extension

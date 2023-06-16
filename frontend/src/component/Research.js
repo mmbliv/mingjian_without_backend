@@ -15,7 +15,7 @@ const query = graphql`
       extension
       publicURL
     }
-    allFile(filter: { relativeDirectory: { eq: "img/research_img" } }) {
+    allFile(filter: { relativeDirectory: { eq: "research/img" } }) {
       nodes {
         relativePath
         extension
